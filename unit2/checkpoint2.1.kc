@@ -20,12 +20,12 @@ char[] MESSAGE = "Checkpoint 2.1 by jenk0086";
 
 void main() {
 	// Initialize screen memory, and select correct font
-	*VIC_MEMORY_ = 0x14;
+	*VIC_MEMORY = 0x14;
 	// Fill the screen with spaces
-	memset(SCREEN, '',40*25);
+	memset(SCREEN, ' ',40*25);
 	// Set the colour of every character on the screen to white
 	memset(COLS, WHITE, 40*25);
-	// Print the "hello world!" message
+	// Print the "Checkpoint 2.1 by jenk0086" message
 	char* sc = SCREEN+40; // Display it one line down on the screen
 	char* msg = MESSAGE; // The message to display
 	//A simple copy routine to copy the string
