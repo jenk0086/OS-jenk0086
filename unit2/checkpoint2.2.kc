@@ -47,7 +47,7 @@ void syscall1() {
 	*(SCREEN+79) = '>';
 }
 
-void syscall2() {
+void syscall3F() {
 	*(SCREEN+78) = '<';
 }
 
