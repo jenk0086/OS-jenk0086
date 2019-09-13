@@ -58,11 +58,11 @@ void syscall2() {
 // We have a char (xjmp) to hold the opcode for the JMP instruction,
 // and then put the address of the SYSCALL/trap handler in the next
 // two points as a pointer, and end with the NOP instruction opcode.
-struct SusCall {
+struct SysCall {
 	char xjmp;	//Hold $4C, the JMP $nnnn opcode
 	void()* syscall;//Holds handler address, will be the target of the JMP
 	char xnop;	//Hold $EA, the NOP opcode
-}:
+};
 
 // To save writing 0x4C and )xEA all the time, we define them as constants
 const char JMP = 0x4c;
