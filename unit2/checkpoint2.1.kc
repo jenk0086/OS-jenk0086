@@ -20,7 +20,7 @@ char[] MESSAGE = "Checkpoint 2.1 by jenk0086";
 
 void main() {
 	// Initialize screen memory, and select correct font
-	*VIC_ = 0x14;
+	*VIC_MEMORY_ = 0x14;
 	// Fill the screen with spaces
 	memset(SCREEN, '',40*25);
 	// Set the colour of every character on the screen to white
