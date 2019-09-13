@@ -5,7 +5,7 @@
 import "string"
 
 // Use a linker definition file (put the previous listing into that file)
-#pragma link("mega65hyper.ld"
+#pragma link("mega65hyper.ld")
 // Some definitions of addresses and special values that this program uses
 const char* RASTER = 0xd012;
 const char* VIC_MEMORY = 0xd018;
