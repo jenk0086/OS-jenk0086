@@ -43,12 +43,190 @@ void main() {
 }
 
 // Here are a couple of sample SYSCALL handlers that just display a character on the screen
-void syscall1() {
-	*(SCREEN+79) = '>';
+void syscall00() {
+	exit_hypervisor();
 }
-
+void syscall01() {
+	exit_hypervisor();
+}
+void syscall02() {
+	exit_hypervisor();
+}
+void syscall03() {
+	exit_hypervisor();
+}
+void syscall04() {
+	exit_hypervisor();
+}
+void syscall05() {
+	exit_hypervisor();
+}
+void syscall06() {
+	exit_hypervisor();
+}
+void syscall07() {
+	exit_hypervisor();
+}
+void syscall08() {
+	exit_hypervisor();
+}
+void syscall09() {
+	exit_hypervisor();
+}
+void syscall0A() {
+	exit_hypervisor();
+}
+void syscall0B() {
+	exit_hypervisor();
+}
+void syscall0C() {
+	exit_hypervisor();
+}
+void syscall0D() {
+	exit_hypervisor();
+}
+void syscall0E() {
+	exit_hypervisor();
+}
+void syscall0F() {
+	exit_hypervisor();
+}
+void syscall10() {
+	exit_hypervisor();
+}
+void syscall11() {
+	exit_hypervisor();
+}
+void syscall12() {
+	exit_hypervisor();
+}
+void syscall13() {
+	exit_hypervisor();
+}
+void syscall14() {
+	exit_hypervisor();
+}
+void syscall15() {
+	exit_hypervisor();
+}
+void syscall16() {
+	exit_hypervisor();
+}
+void syscall17() {
+	exit_hypervisor();
+}
+void syscall18() {
+	exit_hypervisor();
+}
+void syscall19() {
+	exit_hypervisor();
+}
+void syscall1A() {
+	exit_hypervisor();
+}
+void syscall1B() {
+	exit_hypervisor();
+}
+void syscall1C() {
+	exit_hypervisor();
+}
+void syscall1D() {
+	exit_hypervisor();
+}
+void syscall1E() {
+	exit_hypervisor();
+}
+void syscall1F() {
+	exit_hypervisor();
+}
+void syscall20() {
+	exit_hypervisor();
+}
+void syscall21() {
+	exit_hypervisor();
+}
+void syscall23() {
+	exit_hypervisor();
+}
+void syscall24() {
+	exit_hypervisor();
+}
+void syscall25() {
+	exit_hypervisor();
+}
+void syscall26() {
+	exit_hypervisor();
+}
+void syscall27() {
+	exit_hypervisor();
+}
+void syscall28() {
+	exit_hypervisor();
+}
+void syscall29() {
+	exit_hypervisor();
+}
+void syscall2A() {
+	exit_hypervisor();
+}
+void syscall2B() {
+	exit_hypervisor();
+}
+void syscall2C() {
+	exit_hypervisor();
+}
+void syscall2D() {
+	exit_hypervisor();
+}
+void syscall2E() {
+	exit_hypervisor();
+}
+void syscall2F() {
+	exit_hypervisor();
+}
+void syscall31() {
+	exit_hypervisor();
+}
+void syscall32() {
+	exit_hypervisor();
+}
+void syscall33() {
+	exit_hypervisor();
+}
+void syscall34() {
+	exit_hypervisor();
+}
+void syscall35() {
+	exit_hypervisor();
+}
+void syscall36() {
+	exit_hypervisor();
+}
+void syscall37() {
+	exit_hypervisor();
+}
+void syscall38() {
+	exit_hypervisor();
+}
+void syscall39() {
+	exit_hypervisor();
+}
+void syscall3A() {
+	exit_hypervisor();
+}
+void syscall3B() {
+	exit_hypervisor();
+}
+void syscall3C() {
+	exit_hypervisor();
+}
+void syscall3D() {
+	exit_hypervisor();
+}
+void syscall3E() {
+	exit_hypervisor();
+}
 void syscall3F() {
-	*(SCREEN+78) = '<';
 }
 
 // Now we select the SYSCALL segment to hold the SYSCALL/trap entry point table.
@@ -73,21 +251,22 @@ const char NOP = 0xea;
 // Each line is an instance of the struct SysCall from above, with the JMP
 // opcode value, the address of the handler routine and the NOP opcode value.
 export struct SysCall[] SYSCALLS = {
-	{ JMP, &syscall1, NOP },
-	{ JMP, &syscall2, NOP },
-	{ JMP, &syscall3, NOP },
-	{ JMP, &syscall4, NOP },
-	{ JMP, &syscall5, NOP },
-	{ JMP, &syscall6, NOP },
-	{ JMP, &syscall7, NOP },
-	{ JMP, &syscall8, NOP },
-	{ JMP, &syscall9, NOP },
-	{ JMP, &syscallA, NOP },
-	{ JMP, &syscallB, NOP },
-	{ JMP, &syscallC, NOP },
-	{ JMP, &syscallD, NOP },
-	{ JMP, &syscallE, NOP },
-	{ JMP, &syscallF, NOP },
+	{ JMP, &syscall00, NOP },
+	{ JMP, &syscall01, NOP },
+	{ JMP, &syscall02, NOP },
+	{ JMP, &syscall03, NOP },
+	{ JMP, &syscall04, NOP },
+	{ JMP, &syscall05, NOP },
+	{ JMP, &syscall06, NOP },
+	{ JMP, &syscall07, NOP },
+	{ JMP, &syscall08, NOP },
+	{ JMP, &syscall09, NOP },
+	{ JMP, &syscall0A, NOP },
+	{ JMP, &syscall0B, NOP },
+	{ JMP, &syscall0C, NOP },
+	{ JMP, &syscall0D, NOP },
+	{ JMP, &syscall0E, NOP },
+	{ JMP, &syscall0F, NOP },
 	{ JMP, &syscall10, NOP },
 	{ JMP, &syscall13, NOP },
 	{ JMP, &syscall14, NOP },
@@ -140,5 +319,239 @@ export struct SysCall[] SYSCALLS = {
 // another 62 lines, we can just ask KickC to make the TRAP table begin
 // at the next multiple of $100, i.e., at $8100.
 export align(0x100) struct SysCall[] SYSCALL_RESET = {
-	{ JMP, &main, NOP }
+	{ JMP, &reset, NOP },
+	{ JMP, &pagfault, NOP },
+	{ JMP, &restorkey, NOP },
+	{ JMP, &alttabket, NOP },
+	{ JMP, &vf011rd, NOP },
+	{ JMP, &vf011wr, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &reserved, NOP },
+	{ JMP, &cpukil, NOP}
 };
