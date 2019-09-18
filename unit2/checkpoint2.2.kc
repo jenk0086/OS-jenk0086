@@ -145,6 +145,9 @@ void syscall20() {
 void syscall21() {
 	exit_hypervisor();
 }
+void syscall22() {
+	exit_hypervisor();
+}
 void syscall23() {
 	exit_hypervisor();
 }
