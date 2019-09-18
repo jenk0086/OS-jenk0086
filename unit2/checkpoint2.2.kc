@@ -187,6 +187,9 @@ void syscall2E() {
 void syscall2F() {
 	exit_hypervisor();
 }
+void syscall30() {
+	exit_hypervisor();
+}
 void syscall31() {
 	exit_hypervisor();
 }
