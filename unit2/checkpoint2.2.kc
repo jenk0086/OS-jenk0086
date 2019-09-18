@@ -27,7 +27,7 @@ void main() {
 	memset(COLS, WHITE, 40*25);
 	// Print the "Checkpoint 2.2 by jenk0086" message
 	char* sc = SCREEN+40; // Display it one line down on the screen
-	char* msg = MESSAGE; // The message to display
+	char* msg = MESSAGE;  // The message to display
 	//A simple copy routine to copy the string
 	while(*msg) {
 		*sc++ = *msg++;
@@ -64,7 +64,7 @@ struct SysCall {
 	char xnop;	//Hold $EA, the NOP opcode
 };
 
-// To save writing 0x4C and 0xEA all the time, we define them as constants
+// To save writing 0x4C and 0xEA all the time, we define them as constants.
 const char JMP = 0x4c;
 const char NOP = 0xea;
 
