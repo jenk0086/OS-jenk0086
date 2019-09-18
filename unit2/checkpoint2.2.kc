@@ -18,7 +18,10 @@ const char WHITE = 1;
 // Some text to display
 char[] MESSAGE = "checkpoint 2.2 by jenk0086";
 
-void main() {
+void main(){
+}
+
+void reset() {
 	// Initialize screen memory, and select correct font
 	*VIC_MEMORY = 0x14;
 	// Fill the screen with spaces
@@ -325,7 +328,7 @@ export struct SysCall[] SYSCALLS = {
 // another 62 lines, we can just ask KickC to make the TRAP table begin
 // at the next multiple of $100, i.e., at $8100.
 export align(0x100) struct SysCall[] SYSCALL_TRAP = {
-	{ JMP, &trap, NOP },
+	{ JMP, &reset, NOP },
 	{ JMP, &pagfault, NOP },
 	{ JMP, &restorkey, NOP },
 	{ JMP, &alttabket, NOP },
