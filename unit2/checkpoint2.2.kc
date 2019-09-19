@@ -19,6 +19,7 @@ const char WHITE = 1;
 char[] MESSAGE = "checkpoint 2.2 by jenk0086";
 
 void main(){
+	reset();
 }
 
 void reset() {
@@ -47,193 +48,193 @@ void reset() {
 
 // Here are a couple of sample SYSCALL handlers that just display a character on the screen
 void syscall00() {
-	exit_hypervisor();
+	//exit_hypervisor();
 }
 void syscall01() {
-	exit_hypervisor();
+	//exit_hypervisor();
 }
 void syscall02() {
-	exit_hypervisor();
+	//exit_hypervisor();
 }
 void syscall03() {
-	exit_hypervisor();
+	//exit_hypervisor();
 }
 void syscall04() {
-	exit_hypervisor();
+	//exit_hypervisor();
 }
 void syscall05() {
-	exit_hypervisor();
+	//exit_hypervisor();
 }
 void syscall06() {
-	exit_hypervisor();
+	//exit_hypervisor();
 }
 void syscall07() {
-	exit_hypervisor();
+	//exit_hypervisor();
 }
 void syscall08() {
-	exit_hypervisor();
+	//exit_hypervisor();
 }
 void syscall09() {
-	exit_hypervisor();
+	//exit_hypervisor();
 }
 void syscall0A() {
-	exit_hypervisor();
+	//exit_hypervisor();
 }
 void syscall0B() {
-	exit_hypervisor();
+	//exit_hypervisor();
 }
 void syscall0C() {
-	exit_hypervisor();
+	//exit_hypervisor();
 }
 void syscall0D() {
-	exit_hypervisor();
+	//exit_hypervisor();
 }
 void syscall0E() {
-	exit_hypervisor();
+	//exit_hypervisor();
 }
 void syscall0F() {
-	exit_hypervisor();
+	//exit_hypervisor();
 }
 void syscall10() {
-	exit_hypervisor();
+	//exit_hypervisor();
 }
 void syscall11() {
-	exit_hypervisor();
+	//exit_hypervisor();
 }
 void syscall12() {
-	exit_hypervisor();
+	//exit_hypervisor();
 }
 void syscall13() {
-	exit_hypervisor();
+	//exit_hypervisor();
 }
 void syscall14() {
-	exit_hypervisor();
+	//exit_hypervisor();
 }
 void syscall15() {
-	exit_hypervisor();
+	//exit_hypervisor();
 }
 void syscall16() {
-	exit_hypervisor();
+	//exit_hypervisor();
 }
 void syscall17() {
-	exit_hypervisor();
+	//exit_hypervisor();
 }
 void syscall18() {
-	exit_hypervisor();
+	//exit_hypervisor();
 }
 void syscall19() {
-	exit_hypervisor();
+	//exit_hypervisor();
 }
 void syscall1A() {
-	exit_hypervisor();
+	//exit_hypervisor();
 }
 void syscall1B() {
-	exit_hypervisor();
+	//exit_hypervisor();
 }
 void syscall1C() {
-	exit_hypervisor();
+	//exit_hypervisor();
 }
 void syscall1D() {
-	exit_hypervisor();
+	//exit_hypervisor();
 }
 void syscall1E() {
-	exit_hypervisor();
+	//exit_hypervisor();
 }
 void syscall1F() {
-	exit_hypervisor();
+	//exit_hypervisor();
 }
 void syscall20() {
-	exit_hypervisor();
+	//exit_hypervisor();
 }
 void syscall21() {
-	exit_hypervisor();
+	//exit_hypervisor();
 }
 void syscall22() {
-	exit_hypervisor();
+	//exit_hypervisor();
 }
 void syscall23() {
-	exit_hypervisor();
+	//exit_hypervisor();
 }
 void syscall24() {
-	exit_hypervisor();
+	//exit_hypervisor();
 }
 void syscall25() {
-	exit_hypervisor();
+	//exit_hypervisor();
 }
 void syscall26() {
-	exit_hypervisor();
+	//exit_hypervisor();
 }
 void syscall27() {
-	exit_hypervisor();
+	//exit_hypervisor();
 }
 void syscall28() {
-	exit_hypervisor();
+	//exit_hypervisor();
 }
 void syscall29() {
-	exit_hypervisor();
+	//exit_hypervisor();
 }
 void syscall2A() {
-	exit_hypervisor();
+	//exit_hypervisor();
 }
 void syscall2B() {
-	exit_hypervisor();
+	//exit_hypervisor();
 }
 void syscall2C() {
-	exit_hypervisor();
+	//exit_hypervisor();
 }
 void syscall2D() {
-	exit_hypervisor();
+	//exit_hypervisor();
 }
 void syscall2E() {
-	exit_hypervisor();
+	//exit_hypervisor();
 }
 void syscall2F() {
-	exit_hypervisor();
+	//exit_hypervisor();
 }
 void syscall30() {
-	exit_hypervisor();
+	//exit_hypervisor();
 }
 void syscall31() {
-	exit_hypervisor();
+	//exit_hypervisor();
 }
 void syscall32() {
-	exit_hypervisor();
+	//exit_hypervisor();
 }
 void syscall33() {
-	exit_hypervisor();
+	//exit_hypervisor();
 }
 void syscall34() {
-	exit_hypervisor();
+	//exit_hypervisor();
 }
 void syscall35() {
-	exit_hypervisor();
+	//exit_hypervisor();
 }
 void syscall36() {
-	exit_hypervisor();
+	//exit_hypervisor();
 }
 void syscall37() {
-	exit_hypervisor();
+	//exit_hypervisor();
 }
 void syscall38() {
-	exit_hypervisor();
+	//exit_hypervisor();
 }
 void syscall39() {
-	exit_hypervisor();
+	//exit_hypervisor();
 }
 void syscall3A() {
-	exit_hypervisor();
+	//exit_hypervisor();
 }
 void syscall3B() {
-	exit_hypervisor();
+	//exit_hypervisor();
 }
 void syscall3C() {
-	exit_hypervisor();
+	//exit_hypervisor();
 }
 void syscall3D() {
-	exit_hypervisor();
+	//exit_hypervisor();
 }
 void syscall3E() {
-	exit_hypervisor();
+	//exit_hypervisor();
 }
 void syscall3F() {
 }
