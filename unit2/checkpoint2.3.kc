@@ -48,7 +48,7 @@ void reset() {
 void exit_hypervisor()
 {
 	*(unsigned char *)$D67F = $01;	
-}
+};
 
 // Here are a couple of sample SYSCALL handlers that just display a character on the screen
 
@@ -477,11 +477,11 @@ export struct SysCall[] SYSCALLS = {
 // at the next multiple of $100, i.e., at $8100.
 export align(0x100) struct SysCall[] SYSCALL_TRAP = {
 	{ JMP, &reset, NOP },
-	{ JMP, &reset, NOP },
-	{ JMP, &reset, NOP },
-	{ JMP, &reset, NOP },
-	{ JMP, &reset, NOP },
-	{ JMP, &reset, NOP },
+	{ JMP, &pagfault, NOP },
+	{ JMP, &restorkey, NOP },
+	{ JMP, &alttabkey, NOP },
+	{ JMP, &vf011rd, NOP },
+	{ JMP, &vf011wr, NOP },
 	{ JMP, &reset, NOP },
 	{ JMP, &reset, NOP },
 	{ JMP, &reset, NOP },
