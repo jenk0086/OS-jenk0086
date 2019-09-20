@@ -45,202 +45,392 @@ void reset() {
 	}
 }
 
-void exit_hypervisor()
-{
-*(unsigned char *)$D67F = $01;	
-}
+
 
 // Here are a couple of sample SYSCALL handlers that just display a character on the screen
 void syscall00() {
-	exit_hypervisor();
+}
+void exit_hypervisor()
+{
+	*(unsigned char *)$D67F = $01;	
 }
 void syscall01() {
-	exit_hypervisor();
+}
+void exit_hypervisor()
+{
+	*(unsigned char *)$D67F = $01;	
 }
 void syscall02() {
-	exit_hypervisor();
+}
+void exit_hypervisor()
+{
+	*(unsigned char *)$D67F = $01;
 }
 void syscall03() {
-	exit_hypervisor();
+}
+void exit_hypervisor()
+{
+	*(unsigned char *)$D67F = $01;
 }
 void syscall04() {
-	exit_hypervisor();
+}
+void exit_hypervisor()
+{
+	*(unsigned char *)$D67F = $01;
 }
 void syscall05() {
-	exit_hypervisor();
+}
+void exit_hypervisor()
+{
+	*(unsigned char *)$D67F = $01;
 }
 void syscall06() {
-	exit_hypervisor();
+}
+void exit_hypervisor()
+{
+	*(unsigned char *)$D67F = $01;
 }
 void syscall07() {
-	exit_hypervisor();
+}
+void exit_hypervisor()
+{
+	*(unsigned char *)$D67F = $01;
 }
 void syscall08() {
-	exit_hypervisor();
+}
+void exit_hypervisor()
+{
+	*(unsigned char *)$D67F = $01;
 }
 void syscall09() {
-	exit_hypervisor();
+}
+void exit_hypervisor()
+{
+	*(unsigned char *)$D67F = $01;
 }
 void syscall0A() {
-	exit_hypervisor();
+}
+void exit_hypervisor()
+{
+	*(unsigned char *)$D67F = $01;
 }
 void syscall0B() {
-	exit_hypervisor();
+}
+void exit_hypervisor()
+{
+	*(unsigned char *)$D67F = $01;
 }
 void syscall0C() {
-	exit_hypervisor();
+}
+void exit_hypervisor()
+{
+	*(unsigned char *)$D67F = $01;
 }
 void syscall0D() {
-	exit_hypervisor();
+}
+void exit_hypervisor()
+{
+	*(unsigned char *)$D67F = $01;
 }
 void syscall0E() {
-	exit_hypervisor();
+}
+void exit_hypervisor()
+{
+	*(unsigned char *)$D67F = $01;
 }
 void syscall0F() {
-	exit_hypervisor();
+}
+void exit_hypervisor()
+{
+	*(unsigned char *)$D67F = $01;
 }
 void syscall10() {
-	exit_hypervisor();
 }
-void syscall11() {
-	exit_hypervisor();
+void exit_hypervisor()
+{
+	*(unsigned char *)$D67F = $01;
 }
-void syscall12() {
-	exit_hypervisor();
+void securentr() {
+}
+void exit_hypervisor()
+{
+	*(unsigned char *)$D67F = $01;
+}
+void securexit() {
+}
+void exit_hypervisor()
+{
+	*(unsigned char *)$D67F = $01;
 }
 void syscall13() {
-	exit_hypervisor();
+}
+void exit_hypervisor()
+{
+	*(unsigned char *)$D67F = $01;
 }
 void syscall14() {
-	exit_hypervisor();
+}
+void exit_hypervisor()
+{
+	*(unsigned char *)$D67F = $01;
 }
 void syscall15() {
-	exit_hypervisor();
+}
+void exit_hypervisor()
+{
+	*(unsigned char *)$D67F = $01;
 }
 void syscall16() {
-	exit_hypervisor();
+}
+void exit_hypervisor()
+{
+	*(unsigned char *)$D67F = $01;
 }
 void syscall17() {
-	exit_hypervisor();
+}
+void exit_hypervisor()
+{
+	*(unsigned char *)$D67F = $01;
 }
 void syscall18() {
-	exit_hypervisor();
+}
+void exit_hypervisor()
+{
+	*(unsigned char *)$D67F = $01;
 }
 void syscall19() {
-	exit_hypervisor();
+}
+void exit_hypervisor()
+{
+	*(unsigned char *)$D67F = $01;
 }
 void syscall1A() {
-	exit_hypervisor();
+}
+void exit_hypervisor()
+{
+	*(unsigned char *)$D67F = $01;
 }
 void syscall1B() {
-	exit_hypervisor();
+}
+void exit_hypervisor()
+{
+	*(unsigned char *)$D67F = $01;
 }
 void syscall1C() {
-	exit_hypervisor();
+}
+void exit_hypervisor()
+{
+	*(unsigned char *)$D67F = $01;
 }
 void syscall1D() {
-	exit_hypervisor();
+}
+void exit_hypervisor()
+{
+	*(unsigned char *)$D67F = $01;
 }
 void syscall1E() {
-	exit_hypervisor();
+}
+void exit_hypervisor()
+{
+	*(unsigned char *)$D67F = $01;
 }
 void syscall1F() {
-	exit_hypervisor();
+}
+void exit_hypervisor()
+{
+	*(unsigned char *)$D67F = $01;
 }
 void syscall20() {
-	exit_hypervisor();
+}
+void exit_hypervisor()
+{
+	*(unsigned char *)$D67F = $01;
 }
 void syscall21() {
-	exit_hypervisor();
+}
+void exit_hypervisor()
+{
+	*(unsigned char *)$D67F = $01;
 }
 void syscall22() {
-	exit_hypervisor();
+}
+void exit_hypervisor()
+{
+	*(unsigned char *)$D67F = $01;
 }
 void syscall23() {
-	exit_hypervisor();
+}
+void exit_hypervisor()
+{
+	*(unsigned char *)$D67F = $01;
 }
 void syscall24() {
-	exit_hypervisor();
+}
+void exit_hypervisor()
+{
+	*(unsigned char *)$D67F = $01;
 }
 void syscall25() {
-	exit_hypervisor();
+}
+void exit_hypervisor()
+{
+	*(unsigned char *)$D67F = $01;
 }
 void syscall26() {
-	exit_hypervisor();
+}
+void exit_hypervisor()
+{
+	*(unsigned char *)$D67F = $01;
 }
 void syscall27() {
-	exit_hypervisor();
+}
+void exit_hypervisor()
+{
+	*(unsigned char *)$D67F = $01;
 }
 void syscall28() {
-	exit_hypervisor();
+}
+void exit_hypervisor()
+{
+	*(unsigned char *)$D67F = $01;
 }
 void syscall29() {
-	exit_hypervisor();
+}
+void exit_hypervisor()
+{
+	*(unsigned char *)$D67F = $01;
 }
 void syscall2A() {
-	exit_hypervisor();
+}
+void exit_hypervisor()
+{
+	*(unsigned char *)$D67F = $01;
 }
 void syscall2B() {
-	exit_hypervisor();
+}
+void exit_hypervisor()
+{
+	*(unsigned char *)$D67F = $01;
 }
 void syscall2C() {
-	exit_hypervisor();
+}
+void exit_hypervisor()
+{
+	*(unsigned char *)$D67F = $01;
 }
 void syscall2D() {
-	exit_hypervisor();
+}
+void exit_hypervisor()
+{
+	*(unsigned char *)$D67F = $01;
 }
 void syscall2E() {
-	exit_hypervisor();
+}
+void exit_hypervisor()
+{
+	*(unsigned char *)$D67F = $01;
 }
 void syscall2F() {
-	exit_hypervisor();
+}
+void exit_hypervisor()
+{
+	*(unsigned char *)$D67F = $01;
 }
 void syscall30() {
-	exit_hypervisor();
+}
+void exit_hypervisor()
+{
+	*(unsigned char *)$D67F = $01;
 }
 void syscall31() {
-	exit_hypervisor();
+}
+void exit_hypervisor()
+{
+	*(unsigned char *)$D67F = $01;
 }
 void syscall32() {
-	exit_hypervisor();
+}
+void exit_hypervisor()
+{
+	*(unsigned char *)$D67F = $01;
 }
 void syscall33() {
-	exit_hypervisor();
+}
+void exit_hypervisor()
+{
+	*(unsigned char *)$D67F = $01;
 }
 void syscall34() {
-	exit_hypervisor();
+}
+void exit_hypervisor()
+{
+	*(unsigned char *)$D67F = $01;
 }
 void syscall35() {
-	exit_hypervisor();
+}
+void exit_hypervisor()
+{
+	*(unsigned char *)$D67F = $01;
 }
 void syscall36() {
-	exit_hypervisor();
+}
+void exit_hypervisor()
+{
+	*(unsigned char *)$D67F = $01;
 }
 void syscall37() {
-	exit_hypervisor();
+}
+void exit_hypervisor()
+{
+	*(unsigned char *)$D67F = $01;
 }
 void syscall38() {
-	exit_hypervisor();
+}
+void exit_hypervisor()
+{
+	*(unsigned char *)$D67F = $01;
 }
 void syscall39() {
-	exit_hypervisor();
+}
+void exit_hypervisor()
+{
+	*(unsigned char *)$D67F = $01;
 }
 void syscall3A() {
-	exit_hypervisor();
+}
+void exit_hypervisor()
+{
+	*(unsigned char *)$D67F = $01;
 }
 void syscall3B() {
-	exit_hypervisor();
+}
+void exit_hypervisor()
+{
+	*(unsigned char *)$D67F = $01;
 }
 void syscall3C() {
-	exit_hypervisor();
+}
+void exit_hypervisor()
+{
+	*(unsigned char *)$D67F = $01;
 }
 void syscall3D() {
-	exit_hypervisor();
+}
+void exit_hypervisor()
+{
+	*(unsigned char *)$D67F = $01;
 }
 void syscall3E() {
-	exit_hypervisor();
+}
+void exit_hypervisor()
+{
+	*(unsigned char *)$D67F = $01;
 }
 void syscall3F() {
+}
+void exit_hypervisor()
+{
+	*(unsigned char *)$D67F = $01;
 }
 
 // Now we select the SYSCALL segment to hold the SYSCALL/trap entry point table.
@@ -282,6 +472,8 @@ export struct SysCall[] SYSCALLS = {
 	{ JMP, &syscall0E, NOP },
 	{ JMP, &syscall0F, NOP },
 	{ JMP, &syscall10, NOP },
+	{ JMP, &securentr, NOP },
+	{ JMP, &securexit, NOP },
 	{ JMP, &syscall13, NOP },
 	{ JMP, &syscall14, NOP },
 	{ JMP, &syscall15, NOP },
