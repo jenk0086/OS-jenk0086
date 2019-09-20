@@ -51,6 +51,7 @@ void exit_hypervisor()
 }
 
 // Here are a couple of sample SYSCALL handlers that just display a character on the screen
+
 void syscall00() {
 
 	void exit_hypervisor();
@@ -279,7 +280,7 @@ void syscall2A() {
 }
 void syscall2B() {
 
-	void exit_hypervisor()
+	void exit_hypervisor();
 
 }
 void syscall2C() {
