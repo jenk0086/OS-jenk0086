@@ -21,6 +21,8 @@ char[] MESSAGE = "checkpoint 2.3 by jenk0086";
 void main() {
 }
 
+void print_to_screen(char *message);
+
 void reset() {
 	// Initialize screen memory, and select correct font
 	*VIC_MEMORY = 0x14;
