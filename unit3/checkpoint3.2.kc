@@ -55,7 +55,7 @@ void print_hex(unsigned short value)
 
 void print_newline(){
   current_screen_line = current_screen_line + 40; //Go to the next line
-  current_screen_x = 0;                           // Start next line at beginning
+  current_screen_x = 0;                           // Start next line at beginning.
 }
 
 void reset() {
