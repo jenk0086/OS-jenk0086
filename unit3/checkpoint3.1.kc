@@ -18,7 +18,7 @@ unsigned char *current_screen_line = $0400;
 unsigned char current_screen_x = 0;
 
 // Some text to display
-char[] MESSAGE = "jenk0086 operating system starting";
+char[] MESSAGE = "jenk0086 operating system starting...";
 
 
 
@@ -53,18 +53,12 @@ void reset() {
 	while(*msg) {
 		*sc++ = *msg++;
 	}
-	print_newline();
-	print_newline();
-	print_newline();
+
 	msg = MESSAGE;
 	print_to_screen(MESSAGE);
 	// Loop forever showing two white lines as raster bars
 	while(true) {
-		if(*RASTER==54 || *RASTER==66) {
-			*BGCOL = RED;
-		} else {
-			*BGCOL = BLACK;
-		}
+	
 	}
 }
 
