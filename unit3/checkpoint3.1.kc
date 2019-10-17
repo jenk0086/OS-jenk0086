@@ -31,6 +31,7 @@ void print_to_screen(char *message){
     //*screen_pos = *message;
     *screen_pos = 'x';
     current_screen_x++;
+    message++;
   }
 }
 
