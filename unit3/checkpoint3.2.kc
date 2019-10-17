@@ -36,8 +36,8 @@ void print_to_screen(char *message){
 
 void test_memory()
 {
-  //unsigned short mem_start = $0800;
-  //  unsigned short mem_end = $0800;
+  unsigned short mem_start = $0800;
+  unsigned short mem_end = $0800;
 }
 
 void print_hex(unsigned short value)
@@ -45,12 +45,12 @@ void print_hex(unsigned short value)
   char[5] hex;
   unsigned char i;
   for(i=0;i<4;i++) {
-    //if (value<0xa000) hex[i]='0'+(char)(value>>12);
-    //else hex[i]=(char)(value>>12)-9;
-    //value<<=4;
+    if (value<0xa000) hex[i]='0'+(char)(value>>12);
+    else hex[i]=(char)(value>>12)-9;
+    value<<=4;
   }
   hex[4]=0;
-  //print_to_screen(hex);
+  print_to_screen(hex);
 }
 
 void print_newline(){
@@ -65,10 +65,10 @@ void reset() {
 	memset(SCREEN, ' ',40*25);
 	// Set the colour of every character on the screen to white
 	memset(COLS, RED, 40*25);
-	//print_to_screen(MESSAGE);  //Print string in "Message"
+	print_to_screen(MESSAGE);  //Print string in "Message"
 	print_newline();           //go to the next line to begin printing
-	//print_to_screen("testing hardware");  //Print this text on the newline
-	//print_hex($1234);
+	print_to_screen("testing hardware");  //Print this text on the newline
+	print_hex($1234);
 	while(true) {
 	
        	}
