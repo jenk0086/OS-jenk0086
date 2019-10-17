@@ -28,8 +28,8 @@ void main(){
 void print_to_screen(char *message){
   while (*message){
     char* screen_pos = current_screen_line + current_screen_x;
-    //*screen_pos = *message;
-    *screen_pos = 'x';
+    *screen_pos = *message;
+    //*screen_pos = 'x';
     current_screen_x++;
     message++;
   }
