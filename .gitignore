@@ -1,0 +1,8 @@
+*.mem
+*.asm
+*.bin
+*.dbg
+*.klog
+*.kc~
+*.vs
+*.o
