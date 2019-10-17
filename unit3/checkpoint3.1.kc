@@ -46,9 +46,9 @@ void reset() {
 	memset(SCREEN, ' ',40*25);
 	// Set the colour of every character on the screen to white
 	memset(COLS, RED, 40*25);
-    *screen_pos = *message;  // Print the letter at the position pointed to
-    current_screen_x++;      // Current screen item
-    message++;               // Current letter in the message
+	print_to_screen(MESSAGE);
+	print_newline();
+	print_to_screen("testing hardware");
 
 	while(true) {
 	
