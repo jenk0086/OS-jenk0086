@@ -27,8 +27,9 @@ void main(){
 
 void print_to_screen(char *message){
   while (*message){
-    char* screen_pos = *current_screen_line + current_screen_x;
-    *screen_pos = *message;
+    //char* screen_pos = *current_screen_line;
+    //*screen_pos = *message;
+    *current_screen_line = 'x';
     current_screen_x++;
   }
 }
@@ -51,6 +52,11 @@ void reset() {
 	while(*msg) {
 		*sc++ = *msg++;
 	}
+	print_newline();
+	print_newline();
+	print_newline();
+	msg = MESSAGE;
+	print_to_screen(MESSAGE);
 	// Loop forever showing two white lines as raster bars
 	while(true) {
 		if(*RASTER==54 || *RASTER==66) {
