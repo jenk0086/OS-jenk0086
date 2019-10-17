@@ -50,9 +50,9 @@ void reset() {
 	print_newline();           //go to the next line to begin printing
 	print_to_screen("testing hardware");  //Print this text on the newline
 	// Loop forever showing two white lines as raster bars
-	//while(true) {
+	while(true) {
 	
-	//	}
+       	}
 }
 
 void exit_hypervisor()
