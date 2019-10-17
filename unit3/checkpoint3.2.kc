@@ -12,13 +12,32 @@ const char* VIC_MEMORY = 0xd018;
 const char* SCREEN = 0x0400;
 const char* BGCOL = 0xd021;
 const char* COLS = 0xd800;
-const char BLACK = 1;
-const char WHITE = 2;
+const char BLACK = 0;
+const char RED = 4;
+unsigned char *current_screen_line = $0400;
+unsigned char current_screen_x = 0;
 
 // Some text to display
-char[] MESSAGE = "checkpoint 2.3 by jenk0086";
+char[] MESSAGE = "jenk0086 operating system starting...";
 
-void main() {
+
+
+void main(){
+}
+
+void print_to_screen(char *message){
+  while (*message){
+    char* screen_pos = current_screen_line + current_screen_x;
+    *screen_pos = *message;
+    //*screen_pos = 'x';
+    current_screen_x++;
+    message++;
+  }
+}
+
+void print_newline(){
+  current_screen_line = current_screen_line + 40;
+  current_screen_x = 0;
 }
 
 void reset() {
@@ -27,21 +46,13 @@ void reset() {
 	// Fill the screen with spaces
 	memset(SCREEN, ' ',40*25);
 	// Set the colour of every character on the screen to white
-	memset(COLS, WHITE, 40*25);
-	// Print the "Checkpoint 2.2 by jenk0086" message
-	char* sc = SCREEN+40; // Display it one line down on the screen
-	char* msg = MESSAGE;  // The message to display
-	//A simple copy routine to copy the string
-	while(*msg) {
-		*sc++ = *msg++;
-	}
+	memset(COLS, RED, 40*25);
+	print_to_screen(MESSAGE);
+	print_newline();
+	print_to_screen("testing hardware");
 	// Loop forever showing two white lines as raster bars
 	while(true) {
-		if(*RASTER==54 || *RASTER==66) {
-			*BGCOL = WHITE;
-		} else {
-			*BGCOL = BLACK;
-		}
+	
 	}
 }
 
