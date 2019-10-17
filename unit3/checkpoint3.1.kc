@@ -27,9 +27,9 @@ void main(){
 
 void print_to_screen(char *message){
   while (*message){
-    //char* screen_pos = *current_screen_line;
+    char* screen_pos = current_screen_line;
     //*screen_pos = *message;
-    *current_screen_line = 'x';
+    *screen_pos = 'x';
     current_screen_x++;
   }
 }
