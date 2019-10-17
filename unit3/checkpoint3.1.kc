@@ -46,16 +46,9 @@ void reset() {
 	memset(SCREEN, ' ',40*25);
 	// Set the colour of every character on the screen to white
 	memset(COLS, RED, 40*25);
-	// Print the "Checkpoint 2.2 by jenk0086" message
-	char* sc = SCREEN+40; // Display it one line down on the screen
-	char* msg = MESSAGE;  // The message to display
-	//A simple copy routine to copy the string
-	while(*msg) {
-		*sc++ = *msg++;
-	}
-
-	msg = MESSAGE;
 	print_to_screen(MESSAGE);
+	print_newline();
+	print_to_screen("testing hardware");
 	// Loop forever showing two white lines as raster bars
 	while(true) {
 	
