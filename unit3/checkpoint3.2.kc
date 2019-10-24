@@ -30,7 +30,7 @@ void test_memory()
   unsigned short mem_end = $7FFF;
   unsigned char i;
   for(i=$0800;i<$7FFF;i++){
-    print_hex(i);
+    //print_hex(i);
   }
 }
 
