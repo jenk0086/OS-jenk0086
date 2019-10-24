@@ -70,7 +70,7 @@ void reset() {
 	print_to_screen("testing hardware");  //Print this text on the newline
 	test_memory();
 	print_to_screen("the value is $");
-	print_hex($4546);
+	print_hex(4546);
 	print_newline();
 	while(true) {
 	
