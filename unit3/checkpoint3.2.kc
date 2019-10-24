@@ -69,7 +69,7 @@ void reset() {
 	print_newline();           //go to the next line to begin printing
 	print_to_screen("testing hardware");  //Print this text on the newline
 	test_memory();
-	print_hex((unsigned short)a_pointer);
+	print_hex(unsigned short);
 	while(true) {
 	
        	}
