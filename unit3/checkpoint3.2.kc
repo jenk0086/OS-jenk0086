@@ -29,10 +29,14 @@ void test_memory()
   unsigned short mem_start = $0800;
   unsigned short mem_end = $7FFF;
   unsigned short i=mem_start;
+  
 
   while (i<mem_end)
   {
     i++;
+    unsigned char j;
+    for (j=0;j<256;j++){
+    }
   }
   print_hex(i);
 }
