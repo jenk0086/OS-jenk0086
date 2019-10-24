@@ -28,7 +28,7 @@ void test_memory()
 {
   unsigned short mem_start = $0800;
   unsigned short mem_end = $7FFF;
-  unsigned char i=mem_start;
+  unsigned short i=mem_start;
 
   while (i<mem_end)
   {
