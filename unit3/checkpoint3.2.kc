@@ -29,7 +29,9 @@ void test_memory()
   unsigned short mem_start = $0800;
   unsigned short mem_end = $7FFF;
   unsigned char i;
-  for(i=$0800;i<$7FFF;i++);
+  for(i=$0800;i<$7FFF;i++){
+    print_hex(i);
+  }
 }
 
 void print_hex(unsigned short value)
