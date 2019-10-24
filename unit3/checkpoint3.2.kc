@@ -34,6 +34,22 @@ void print_to_screen(char *message){
   }
 }
 
+
+void print_newline(){
+  current_screen_line = current_screen_line + 40; //Go to the next line
+  current_screen_x = 0;                           // Start next line at beginning.
+}
+
+void reset() {
+	// Initialize screen memory, and select correct font
+	*VIC_MEMORY = 0x14;
+	// Fill the screen with spaces
+	memset(SCREEN, ' ',40*25);
+	// Set the colour of every character on the screen to white
+	memset(COLS, RED, 40*25);
+	print_to_screen(MESSAGE);  //Print string in "Message"
+	print_newline();           //go to the next line to begin printing
+	print_to_screen("testing hardware");  //Print this text on the newline
 void test_memory()
 {
   unsigned short mem_start = $0800;
@@ -52,23 +68,6 @@ void print_hex(unsigned short value)
   hex[4]=0;
   print_to_screen(hex);
 }
-
-void print_newline(){
-  current_screen_line = current_screen_line + 40; //Go to the next line
-  current_screen_x = 0;                           // Start next line at beginning.
-}
-
-void reset() {
-	// Initialize screen memory, and select correct font
-	*VIC_MEMORY = 0x14;
-	// Fill the screen with spaces
-	memset(SCREEN, ' ',40*25);
-	// Set the colour of every character on the screen to white
-	memset(COLS, RED, 40*25);
-	print_to_screen(MESSAGE);  //Print string in "Message"
-	print_newline();           //go to the next line to begin printing
-	print_to_screen("testing hardware");  //Print this text on the newline
-	print_hex($1234);
 	while(true) {
 	
        	}
