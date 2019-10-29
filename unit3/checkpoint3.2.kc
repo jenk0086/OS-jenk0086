@@ -29,6 +29,7 @@ void test_memory()
   unsigned short mem_start = $0800;
   unsigned short mem_end = $7FFF;
   volatile unsigned char *i = mem_start;
+  i = mem_start;
   //volatile unsigned char *p;
   *i = 5;
 
