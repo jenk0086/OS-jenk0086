@@ -31,18 +31,18 @@ void test_memory()
   volatile unsigned char *i = mem_start;
   i = mem_start;
   //volatile unsigned char *p;
-  *i = 5;
+  //*i = 5;
 
-  // while (i<mem_end)
-  //{
-  // i++;
-  //unsigned byte k;  
-  //unsigned byte j;
-  //for (j=0;j<10;j++){
-  // *i = j;
-  // k = *i;
-  //}
-  //}
+   while (i<mem_end)
+  {
+  i++;
+  unsigned short k;  
+  unsigned short j;
+  for (j=0;j<10;j++){
+   *i = j;
+   k = *i;
+  }
+  }
   print_hex(5);
 }
 
