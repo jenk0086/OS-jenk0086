@@ -28,20 +28,27 @@ void test_memory()
 {
   unsigned short mem_start = $0800;
   unsigned short mem_end = $7FFF;
-  volatile unsigned char *i = mem_start;
+  volatile unsigned char *i;
   i = mem_start;
-  //volatile unsigned char *p;
+  //
   //*i = 5;
 
    while (i<mem_end)
   {
-  i++;
-  unsigned char k;  
-  unsigned char j;
-  for (j=0;j<10;j++){
-   *i = j;
-   k = *i;
-  }
+  
+    unsigned char k;  
+    unsigned char j;
+    for (j=0;j<10;j++){
+      *i = j;
+      k = *i; 
+      if (k!=j){
+	print_to_screen("the value is $");
+	print_hex($1234);
+	print_newline();
+      }
+    }
+      i++;
+    
   }
   print_hex(5);
 }
