@@ -34,8 +34,8 @@ void test_memory()
   while (i<mem_end)
   {
     i++;
-    unsigned char k;  
-    unsigned char j;
+    unsigned short k;  
+    unsigned short j;
     for (j=0;j<10;j++){
       *i = j;
       k = *i;
