@@ -30,8 +30,7 @@ void test_memory()
   unsigned short mem_end = $7FFF;
   volatile unsigned char *i;
   i = mem_start;
-  //
-  //*i = 5;
+
 
    while (i<mem_end)
   {
@@ -49,8 +48,6 @@ void test_memory()
     }
       i++;
     
-  }
-  print_hex(5);
 }
 
 void print_hex(unsigned short value)
