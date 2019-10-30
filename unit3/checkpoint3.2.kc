@@ -47,7 +47,7 @@ void test_memory()
       }
     }
       i++;
-    
+  }
 }
 
 void print_hex(unsigned short value)
