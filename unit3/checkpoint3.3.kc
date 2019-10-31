@@ -24,6 +24,13 @@ char[] MESSAGE = "jenk0086 operating system starting...";
 void main(){
 }
 
+void detect_devices(){
+  char detect_vicii()
+	print_to_screen("VICII Video Controller found at $");
+	print_hex($1234);
+	print_newline();
+}
+
 void test_memory()
 {
   unsigned short mem_start = $0800;
