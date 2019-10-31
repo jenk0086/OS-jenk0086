@@ -42,7 +42,7 @@ void test_memory()
        k = *i;    //read k 
        if (k!=j){  //if k doesn't = j
 	print_to_screen("the value is $");   //print this to screen
-	print_hex(i);                        // if memory address faulty
+	print_hex();                        // if memory address faulty
 	print_newline();
       }
     }
