@@ -38,7 +38,7 @@ void test_memory()
     unsigned char k;  
     unsigned char j;
     for (j=0;j<10;j++){
-      *i = j;?    //write j
+      *i = j;    //write j
        k = *i;    //read k 
        if (k!=j){  //if k doesn't = j
 	print_to_screen("the value is $");   //print this to screen
