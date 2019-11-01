@@ -126,7 +126,7 @@ void reset() {
 	detect_devices();
 	print_newline();
 	print_to_screen("vic-ii detected at ");
-	print_to_screen(i);
+	//print_to_screen(i);
 	while(true) {
 	
        	}
