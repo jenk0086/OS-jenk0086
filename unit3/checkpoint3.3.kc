@@ -127,7 +127,7 @@ void reset() {
 	print_newline();
 	print_to_screen("vic-ii detected at");
 	print_newline();
-	print_hex(i);
+	print_hex(*i);
 	while(true) {
 	
        	}
