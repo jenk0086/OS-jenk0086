@@ -130,9 +130,7 @@ void reset() {
 	//	test_memory();
 	print_newline();
 	detect_devices();
-	
-	print_newline();
-	print_to_screen("vic-ii detected at ");
+
 	
 	while(true) {
 	
