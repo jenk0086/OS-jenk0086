@@ -43,7 +43,7 @@ void main(){
   //else 
   //print_to_screen("Can't find VIC-II");
   //}
-}
+//}
 
 void test_memory()
 {
