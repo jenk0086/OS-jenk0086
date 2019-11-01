@@ -25,7 +25,10 @@ void main(){
 }
 
 void detect_devices(){
-  
+}
+
+
+void detect_vicii();{
 
   //char detect_DEVICENAME(unsigned short address);
   //Pointer where VIC-II is suspected to be
