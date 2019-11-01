@@ -36,9 +36,6 @@ void detect_devices(){
     if (r == 1){
       print_to_screen("vic-ii detected at ");
     }
-    else{
-      print_to_screen("device not found");
-    }
 
       i=i+$10;
   }
