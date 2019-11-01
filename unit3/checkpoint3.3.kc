@@ -41,7 +41,7 @@ char detect_vicii(unsigned short address){
 
 
   //Pointer where VIC-II is suspected to be
-  volatile unsigned char *p;
+  volatile unsigned char *p = address;
   unsigned char v1,v2;
 
   unsigned short i;
@@ -53,9 +53,7 @@ char detect_vicii(unsigned short address){
   if (v2>v1){
   print_to_screen("Seems to be a VIC-II here");
   }
-  //else {
-  //print_to_screen("Can't find VIC-II");
-  //}
+
   return 0;
 }
 
