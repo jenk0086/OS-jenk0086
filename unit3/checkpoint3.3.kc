@@ -131,7 +131,7 @@ void reset() {
 	//	test_memory();
 	print_newline();
 	detect_devices();
-
+	print_hex();
 	
 	while(true) {
 	
