@@ -43,7 +43,7 @@ void detect_devices(){
   //else {
   //print_to_screen("Can't find VIC-II");
   //}
-  print_to_screen("Finished probing for devices");
+  print_to_screen("finished probing for devices");
 }
 
 void test_memory()
