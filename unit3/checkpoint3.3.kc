@@ -53,9 +53,9 @@ char detect_vicii(unsigned short address){
   if (v2>v1){
   print_to_screen("Seems to be a VIC-II here");
   }
-  else {
-  print_to_screen("Can't find VIC-II");
-  }
+  //else {
+  //print_to_screen("Can't find VIC-II");
+  //}
   return 0;
 }
 
