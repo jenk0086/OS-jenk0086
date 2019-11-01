@@ -41,7 +41,7 @@ char detect_vicii(unsigned short address){
 
 
   //Pointer where VIC-II is suspected to be
-  volatile unsigned char *p = address;
+  volatile unsigned char *p = $D000;
   unsigned char v1,v2;
 
   unsigned short i;
@@ -126,7 +126,7 @@ void reset() {
 	detect_devices();
 	print_newline();
 	print_to_screen("vic-ii detected at ");
-	//print_to_screen(i);
+	
 	while(true) {
 	
        	}
