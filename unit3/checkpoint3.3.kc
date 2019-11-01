@@ -125,7 +125,7 @@ void reset() {
 	//	test_memory();
 	print_newline();
 	detect_devices();
-	print_to_screen("Seems to be a VIC-II here"):
+	print_to_screen("Seems to be a VIC-II here");
 	  //print_to_screen("Can't find VIC-II");
 	//print_to_screen("the value is $");
 	//print_newline();
