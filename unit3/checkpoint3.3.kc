@@ -25,24 +25,25 @@ void main(){
 }
 
 void detect_devices(){
-
+  
   //char detect_DEVICENAME(unsigned short address);
   //Pointer where VIC-II is suspected to be
-  volatile unsigned char *p;
-  unsigned char v1,v2;
+  //volatile unsigned char *p;
+  //unsigned char v1,v2;
 
-  unsigned short i;
-  v1=p[$12];     //Read start address + $12
+  //unsigned short i;
+  //v1=p[$12];     //Read start address + $12
   // Wait at least 64 microseconds
-  for(i=1;i<1000;i++) continue;
-  v2=p[$12];     // Read again
+  //for(i=1;i<1000;i++) continue;
+  //v2=p[$12];     // Read again
   
-  if (v2>v1){
-  print_to_screen("Seems to be a VIC-II here");
-  }
-  else {
-  print_to_screen("Can't find VIC-II");
-  }
+  //if (v2>v1){
+  //print_to_screen("Seems to be a VIC-II here");
+  //}
+  //else {
+  //print_to_screen("Can't find VIC-II");
+  //}
+  print_to_screen("Finished probing for devices");
 }
 
 void test_memory()
@@ -109,7 +110,8 @@ void reset() {
 	print_to_screen(MESSAGE);  //Print string in "Message"
 	print_newline();           //go to the next line to begin printing
 	print_to_screen("testing hardware");  //Print this text on the newline
-	test_memory();
+	//	test_memory();
+	detect_devices();
 	//print_to_screen("the value is $");
 	//print_newline();
 	//print_hex($1234);
