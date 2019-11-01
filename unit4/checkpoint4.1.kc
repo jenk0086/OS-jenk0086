@@ -65,6 +65,12 @@ char detect_vicii(unsigned short address){
   }
 }
 
+start_simple_program(){
+  *(unsigned char*)$0300 = $80;
+  *(unsigned char*)$0301 = $00;
+  *(unsigned char*)$0302 = $81;
+  *(unsigned char*)$0303 = $00;
+
 void test_memory()
 {
   unsigned short mem_start = $0800;
