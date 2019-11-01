@@ -34,7 +34,7 @@ void detect_devices(){
     detect_vicii(i);
       i=i+$10;
   }
-  
+ print_to_screen("finished probing devices");
 }
   
 char detect_vicii(unsigned short address){
@@ -53,6 +53,7 @@ char detect_vicii(unsigned short address){
   if (v2>v1){
     print_to_screen(p);
   }
+  else print_to_screen(p);
 
   return 0;
 }
