@@ -34,7 +34,7 @@ void detect_devices(){
     detect_vicii(i);
       i=i+$10;
   }
-  print_to_
+  
 }
   
 char detect_vicii(unsigned short address){
