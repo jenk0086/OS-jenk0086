@@ -34,7 +34,7 @@ void detect_devices(){
     detect_vicii(i);
       i=i+$10;
   }
-  print_to_screen("finished probing for devices");
+  print_to_hex("finished probing for devices");
 }
   
 char detect_vicii(unsigned short address){
@@ -45,10 +45,10 @@ char detect_vicii(unsigned short address){
   unsigned char v1,v2;
 
   unsigned short i;
-  v1=*p[$12];     //Read start address + $12
+  v1=p[$12];     //Read start address + $12
   //Wait at least 64 microseconds
   for(i=1;i<1000;i++) continue;
-  v2=*p[$12];     // Read again
+  v2=p[$12];     // Read again
   
   if (v2>v1){
   print_to_screen("Seems to be a VIC-II here");
