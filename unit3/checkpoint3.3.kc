@@ -26,9 +26,21 @@ void main(){
 
 void detect_devices(){
   char detect_vicii(unsigned short address);
-	print_to_screen("VICII Video Controller found at $");
-	print_hex($1234);
-	print_newline();
+  //Pointer where VIC-II is suspected to be
+  volatile unsigned char *p;
+  unsigned char v1,v2;
+
+  unsigned short i;
+  v1=p[$12];     //Read start address + $12
+  // Wait at least 64 microseconds
+  for(i=1;i<1000;i++) continue;
+  v2=p[$12];     // Read again
+  
+  if (v2>v1){
+	print_to_screen("Seems to be a VIC-II here");
+	else 
+	  print_to_screen("Can't find VIC-II");
+  }
 }
 
 void test_memory()
