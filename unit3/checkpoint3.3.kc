@@ -55,7 +55,7 @@ char detect_vicii(unsigned short address){
   else {
   print_to_screen("Can't find VIC-II");
   }
-  //return 0;
+  return print_to_screen;
 }
 
 void test_memory()
