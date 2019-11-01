@@ -53,7 +53,7 @@ char detect_vicii(unsigned short address){
   if (v2>v1){
   print_to_screen("Seems to be a VIC-II here");
   }
-
+  print_to_screen(p);
   return 0;
 }
 
