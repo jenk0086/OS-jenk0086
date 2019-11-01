@@ -31,6 +31,7 @@ void detect_devices(){
     i = check;
  while (i<finish)
   {
+    detect_vicii(i);
       i=i+$10;
   }
   print_to_screen("finished probing for devices");
@@ -126,8 +127,6 @@ void reset() {
 	print_newline();
 	detect_devices();
 	print_newline();
-	print_to_screen("seems to be a vic-ii here");
-	print_to_screen("can't find vic-ii");
 	//print_to_screen("the value is $");
 	//print_newline();
 	//print_hex($1234);
