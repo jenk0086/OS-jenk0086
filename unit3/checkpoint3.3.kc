@@ -41,7 +41,7 @@ char detect_vicii(unsigned short address){
 
 
   //Pointer where VIC-II is suspected to be
-  volatile unsigned char *p = $D111;
+  volatile unsigned char *p = $D000;
   unsigned char v1,v2;
 
   unsigned short i;
