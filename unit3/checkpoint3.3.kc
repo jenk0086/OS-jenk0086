@@ -25,6 +25,25 @@ void main(){
 }
 
 void detect_devices(){
+    unsigned short check;
+    unsigned short finish;
+    unsigned char i
+ while (i<finish)
+  {
+
+    unsigned char k;  
+    unsigned char j;
+    for (j=0;j<10;j++){
+      i = j;
+      k = i; 
+      if (k!=j){
+	print_to_screen("the value is $");
+	print_hex($1234);
+	print_newline();
+      }
+    }
+      i+$10;
+  }
   
   //char detect_DEVICENAME(unsigned short address);
   //Pointer where VIC-II is suspected to be
