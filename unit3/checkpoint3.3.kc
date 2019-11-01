@@ -26,8 +26,6 @@ void main(){
 
 void detect_devices(){
 
-
-
   //char detect_DEVICENAME(unsigned short address);
   //Pointer where VIC-II is suspected to be
   volatile unsigned char *p;
@@ -49,8 +47,8 @@ void detect_devices(){
 
 void test_memory()
 {
-  unsigned short mem_start = $0800;
-  unsigned short mem_end = $7FFF;
+  unsigned short mem_start = $D000;
+  unsigned short mem_end = $DFF0;
   volatile unsigned char *i;
   i = mem_start;
 
