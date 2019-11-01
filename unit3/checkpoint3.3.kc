@@ -27,11 +27,11 @@ void main(){
 void detect_devices(){
     unsigned short check = $D000;
     unsigned short finish = $DFF0;
-    unsigned char *i;
+    unsigned short *i;
     i = check;
  while (i<finish)
   {
-    detect_vicii(i);
+    detect_vicii(*i);
       i=i+$10;
   }
   print_to_screen("finished probing for devices");
