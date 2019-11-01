@@ -51,9 +51,9 @@ char detect_vicii(unsigned short address){
   v2=p[$12];     // Read again
   
   if (v2>v1){
-    print_to_screen(p);
+    print_to_screen("x");
   }
-  else print_to_screen(p);
+  else print_to_screen("y");
 
   return 0;
 }
@@ -125,6 +125,7 @@ void reset() {
 	//	test_memory();
 	print_newline();
 	detect_devices();
+	detect_vicii();
 	print_newline();
 	print_to_screen("vic-ii detected at ");
 	
