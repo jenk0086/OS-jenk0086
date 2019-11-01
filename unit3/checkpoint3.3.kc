@@ -48,7 +48,7 @@ void main(){
 void test_memory()
 {
   unsigned short mem_start = $D000;
-  unsigned short mem_end = $DFFO;
+  unsigned short mem_end = $DFF;
   volatile unsigned char *i;
   i = mem_start;
 
