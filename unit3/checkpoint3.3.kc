@@ -31,7 +31,7 @@ void detect_devices(){
     i = check;
  while (i<finish)
   {
-      i+$10;
+      i=i+$10;
   }
   
   //char detect_DEVICENAME(unsigned short address);
