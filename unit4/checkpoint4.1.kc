@@ -13,7 +13,7 @@ const char* SCREEN = 0x0400;
 const char* BGCOL = 0xd021;
 const char* COLS = 0xd800;
 const char BLACK = 0;
-const char RED = 6;
+const char RED = 7;
 unsigned char *current_screen_line = $0400;
 unsigned char current_screen_x = 0;
 
