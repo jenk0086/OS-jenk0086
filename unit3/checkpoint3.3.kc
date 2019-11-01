@@ -125,7 +125,7 @@ void reset() {
 	//	test_memory();
 	print_newline();
 	detect_devices();
-	detect_vicii();
+	
 	print_newline();
 	print_to_screen("vic-ii detected at ");
 	
