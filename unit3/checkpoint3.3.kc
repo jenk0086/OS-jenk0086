@@ -27,7 +27,7 @@ void main(){
 void detect_devices(){
     unsigned short check = $D000;
     unsigned short finish = $DFF0;
-    unsigned char i;
+    unsigned char *i;
     i = check;
  while (i<finish)
   {
