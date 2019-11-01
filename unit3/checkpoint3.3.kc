@@ -24,7 +24,7 @@ char[] MESSAGE = "jenk0086 operating system starting...";
 void main(){
 }
 
-//void detect_devices(){
+void detect_devices(){
   
 
   //char detect_DEVICENAME(unsigned short address);
@@ -43,7 +43,7 @@ void main(){
   //else 
   //print_to_screen("Can't find VIC-II");
   //}
-//}
+}
 
 void test_memory()
 {
