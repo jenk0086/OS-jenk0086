@@ -25,6 +25,9 @@ void main(){
 }
 
 void detect_devices(){
+}
+
+void detect_DEVICENAME(){
   char detect_DEVICENAME(unsigned short address);
   //Pointer where VIC-II is suspected to be
   volatile unsigned char *p;
