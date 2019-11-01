@@ -127,7 +127,7 @@ void reset() {
 	detect_devices();
 	print_newline();
 	print_to_screen("seems to be a vic-ii here");
-	print_to_screen("Can't find VIC-II");
+	print_to_screen("can't find vic-ii");
 	//print_to_screen("the value is $");
 	//print_newline();
 	//print_hex($1234);
