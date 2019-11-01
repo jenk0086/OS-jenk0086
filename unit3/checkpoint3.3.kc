@@ -51,7 +51,7 @@ char detect_vicii(unsigned short address){
   v2=p[$12];     // Read again
   
   if (v2>v1){
-    print_to_screen(*p);
+    print_to_screen(p);
   }
 
   return 0;
