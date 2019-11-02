@@ -65,7 +65,7 @@ char detect_vicii(unsigned short address){
   }
 }
 
-start_simple_program()
+void start_simple_program()
 {
 
   *(unsigned char *)$0300 = $80;
