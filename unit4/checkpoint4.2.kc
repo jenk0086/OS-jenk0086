@@ -167,6 +167,8 @@ void reset() {
 	start_simple_program();
 	current_screen_line = $0400;
 	current_screen_x = 0;
+	syscall00();
+	syscall01();
 	
 	while(true) {
 	
