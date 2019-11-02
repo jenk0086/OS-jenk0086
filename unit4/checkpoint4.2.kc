@@ -14,8 +14,8 @@ const char* BGCOL = 0xd021;
 const char* COLS = 0xd800;
 const char BLACK = 0;
 const char RED = 7;
-volatile unsigned char *current_screen_line = $0400;
-volatile unsigned char current_screen_x = 0;
+unsigned char *current_screen_line = $0400;
+unsigned char current_screen_x = 0;
 
 // Some text to display
 char[] MESSAGE = "checkpoint 4.2 jenk0086";
@@ -164,10 +164,7 @@ void reset() {
        	//print_newline();
        	//detect_devices();
 	start_simple_program();
-	current_screen_line = $0400;
-	current_screen_x = 0;
-	syscall00();
-	syscall01();
+
 	
 	while(true) {
 	
@@ -184,13 +181,13 @@ void exit_hypervisor()
 
 void syscall00() {
   
-  print_to_screen("syscall00 entered");
+  //print_to_screen("syscall00 entered");
 	exit_hypervisor();
 
 }
 
 void syscall01() {
-  print_to_screen("syscall01 entered");
+  //print_to_screen("syscall01 entered");
 	exit_hypervisor();
 
 }
