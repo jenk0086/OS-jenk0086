@@ -18,7 +18,7 @@ unsigned char *current_screen_line = $0400;
 unsigned char current_screen_x = 0;
 
 // Some text to display
-char[] MESSAGE = "checkpoint4.1 jenk0086";
+char[] MESSAGE = "checkpoint 4.1 jenk0086";
 
 
 void main(){
