@@ -90,7 +90,7 @@ void start_simple_program()
   *(unsigned char *)$D705 = $00;
 
   *(unsigned short *)$D648 = $080D;
-  print_to_screen("Hello World");
+  print_to_screen("hello world");
   exit_hypervisor();
 }
 
@@ -155,12 +155,12 @@ void reset() {
 	memset(SCREEN, ' ',40*25);
 	// Set the colour of every character on the screen to white
 	memset(COLS, RED, 40*25);
-	print_to_screen(MESSAGE);  //Print string in "Message"
-	print_newline();           //go to the next line to begin printing
-	print_to_screen("testing hardware");  //Print this text on the newline
+	//	print_to_screen(MESSAGE);  //Print string in "Message"
+	//	print_newline();           //go to the next line to begin printing
+	//	print_to_screen("testing hardware");  //Print this text on the newline
 	//	test_memory();
-	print_newline();
-	detect_devices();
+	//	print_newline();
+	//	detect_devices();
 	start_simple_program();
 	
 	while(true) {
