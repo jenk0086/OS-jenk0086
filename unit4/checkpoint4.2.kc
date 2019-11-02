@@ -181,14 +181,15 @@ void exit_hypervisor()
 
 // Here are a couple of sample SYSCALL handlers that just display a character on the screen
 
-void syscall00("syscall00 entered") {
-
+void syscall00() {
+  
+  print_to_screen("syscall00 entered");
 	exit_hypervisor();
 
 }
 
-void syscall01("syscall01 entered") {
-
+void syscall01() {
+  print_to_screen("syscall01 entered");
 	exit_hypervisor();
 
 }
