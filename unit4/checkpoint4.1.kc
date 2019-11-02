@@ -18,7 +18,7 @@ unsigned char *current_screen_line = $0400;
 unsigned char current_screen_x = 0;
 
 // Some text to display
-char[] MESSAGE = "jenk0086 operating system starting...";
+char[] MESSAGE = "checkpoint4.1 jenk0086";
 
 
 void main(){
@@ -90,7 +90,7 @@ void start_simple_program()
   *(unsigned char *)$D705 = $00;
 
   *(unsigned short *)$D648 = $080D;
-  print_to_screen("hello world");
+  //print_to_screen("hello world");
   exit_hypervisor();
 }
 
@@ -155,7 +155,7 @@ void reset() {
 	memset(SCREEN, ' ',40*25);
 	// Set the colour of every character on the screen to white
 	memset(COLS, RED, 40*25);
-	//	print_to_screen(MESSAGE);  //Print string in "Message"
+		print_to_screen(MESSAGE);  //Print string in "Message"
 	//	print_newline();           //go to the next line to begin printing
 	//	print_to_screen("testing hardware");  //Print this text on the newline
 	//	test_memory();
