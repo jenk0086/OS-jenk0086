@@ -163,7 +163,6 @@ void reset() {
        	current_screen_line = $0400;
 	current_screen_x = 0;
 	print_to_screen(MESSAGE);  //Print string in "Message"
-	//	print_newline();           //go to the next line to begin printing
 	//	print_to_screen("testing hardware");  //Print this text on the newline
        	//test_memory();
 	//	print_newline();
