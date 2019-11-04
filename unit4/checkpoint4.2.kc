@@ -14,7 +14,7 @@ const char* BGCOL = 0xd021;
 const char* COLS = 0xd800;
 const char BLACK = 0;
 const char RED = 7;
-unsigned char *current_screen_line = $0400;
+volatile unsigned char *current_screen_line;
 unsigned char current_screen_x = 0;
 
 // Some text to display
@@ -163,7 +163,7 @@ void reset() {
 	//	print_newline();
 	//	detect_devices();
 	start_simple_program();
-	print_newline();
+
        	current_screen_line = $0400;
 	current_screen_x = 0;
 
