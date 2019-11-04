@@ -10,12 +10,12 @@ import "string"
 
 
 
-const char* RASTER = 0xd012;
+const char* RASTER = 0xd010;
 const char* VIC_MEMORY = 0xd018;
 const char* SCREEN = 0x0400;
 const char* BGCOL = 0xd021;
 const char* COLS = 0xd800;
-const char BLACK = 6;
+const char BLACK = 0;
 const char BLUE = 6;
 const char WHITE = 1;
 
