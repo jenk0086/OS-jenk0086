@@ -162,7 +162,7 @@ void reset() {
 	//	test_memory();
 	//	print_newline();
 	//	detect_devices();
-	start_simple_program();
+	//start_simple_program();
 
        	current_screen_line = $0400;
 	current_screen_x = 0;
