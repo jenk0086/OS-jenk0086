@@ -166,8 +166,7 @@ void reset() {
 
        	current_screen_line = $0400;
 	current_screen_x = 0;
-	print_newline();
-	print_newline();
+
 	while(true) {
 	
        	}
