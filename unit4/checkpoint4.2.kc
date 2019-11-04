@@ -14,7 +14,7 @@ const char* BGCOL = 0xd021;
 const char* COLS = 0xd800;
 const char BLACK = 0;
 const char RED = 7;
-volatile unsigned char *current_screen_line;
+unsigned char *current_screen_line = $0400;
 unsigned char current_screen_x = 0;
 
 // Some text to display
@@ -166,7 +166,7 @@ void reset() {
 
        	current_screen_line = $0400;
 	current_screen_x = 0;
-
+	print_newline();
 	while(true) {
 	
        	}
