@@ -31,28 +31,27 @@ const unsigned char STATE_RUNNING = $01;
 struct process_descriptor_block {
   // Unique identifier for the process
   unsigned char process_id;
-  //XXX - You need to add something here
+
 
   // Current state of the process
   unsigned char process_state;
-  //XXX - You need to add something here
+
 
   // Human readable name of the process
   char* process_name;
-  //XXX - You need to add something here
+
   
   // Where this process is stored when not running
   // i.e., where in the $20000-$5FFFF memory range the
   // process is stored when not running.
   unsigned long storage_start_address;
   unsigned long storage_end_address;
-  //XXX - You need to add something here
-  //XXX - You need to add something here
+
  
   // Stored registers and related machine state for this
   // process (for the $D640-$D67E machine state registers)
     unsigned char* stored_state;
-  //XXX - You need to add something here
+
   
 };
 
@@ -66,7 +65,7 @@ const unsigned char *process_context_states = $C900;
 
 
 volatile unsigned char *current_screen_line = SCREEN;
-volatile unsigned char current_screen_x = 6;
+volatile unsigned char current_screen_x = 0;
 
 void print_char(char c)
 {
@@ -151,13 +150,12 @@ void reset(){
   memset(COLS, WHITE, 40*25);
   print_to_screen(MESSAGE);
   print_newline();
-  print_to_screen("testing hardware");
-    current_screen_line = SCREEN;
-    print_newline();
-    print_newline();
-    print_newline();
+  current_screen_line = SCREEN;
+  print_newline();
+  print_newline();
+  print_newline();
 
-    describe_pdb(0);
+  describe_pdb(0);
 
 	char* sc = SCREEN+40; // Display it one line down on the screen
 	char* msg = MESSAGE;  // The message to display
