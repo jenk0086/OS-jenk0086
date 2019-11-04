@@ -159,6 +159,7 @@ void reset() {
 	memset(SCREEN, ' ',40*25);
 	// Set the colour of every character on the screen to white
 	memset(COLS, RED, 40*25);
+	start_simple_program();
 	//print_newline();
 	print_to_screen(MESSAGE);  //Print string in "Message"
 	//	print_newline();           //go to the next line to begin printing
@@ -166,7 +167,7 @@ void reset() {
 	//	test_memory();
 	//	print_newline();
 	//	detect_devices();
-	start_simple_program();
+
 
        	current_screen_line;
 	current_screen_x;
