@@ -135,8 +135,8 @@ void print_hex(unsigned short value)
 
 void print_to_screen(char *message){
   while (*message){
-  volatile unsigned char *current_screen_line;
-  volatile unsigned char current_screen_x;
+    //volatile unsigned char *current_screen_line;
+    //volatile unsigned char current_screen_x;
     char* screen_pos = current_screen_line + current_screen_x;
     *screen_pos = *message;  // Print the letter at the position pointed to
     current_screen_x++;      // Current screen item
