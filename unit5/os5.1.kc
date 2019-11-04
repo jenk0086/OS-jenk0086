@@ -21,6 +21,9 @@ const char WHITE = 1;
 
 char[] MESSAGE = "checkpoint 5.1";
 
+void main(){
+}
+
 const unsigned char STATE_NOTRUNNING = $00;
 const unsigned char STATE_RUNNING = $01;
 
