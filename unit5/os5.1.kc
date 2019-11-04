@@ -149,24 +149,24 @@ void reset(){
   memset(SCREEN, ' ', 40*25);
   memset(COLS, WHITE, 40*25);
   *BGCOL = BLUE;
-  current_screen_line = SCREEN;
-  print_newline();
-  print_to_screen(MESSAGE);
-
-
-  print_newline();
-  print_newline();
-  print_newline();
-
-  describe_pdb(0);
-
 	char* sc = SCREEN+40; // Display it one line down on the screen
 	char* msg = MESSAGE;  // The message to display
 	//A simple copy routine to copy the string
 	while(*msg) {
 		*sc++ = *msg++;
 	}
-	while(true) {
+  current_screen_line = SCREEN;
+  print_newline();
+
+  //print_to_screen(MESSAGE);
+  print_newline();
+  print_newline();
+  print_newline();
+
+  describe_pdb(0);
+
+
+     	while(true) {
 	       	if(*RASTER==54 || *RASTER==66) {
 			*BGCOL = WHITE;
 		} else {
