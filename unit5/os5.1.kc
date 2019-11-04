@@ -10,7 +10,7 @@ import "string"
 
 
 
-const char* RASTER = 0xd010;
+const char* RASTER = 0xd012;
 const char* VIC_MEMORY = 0xd018;
 const char* SCREEN = 0x0400;
 const char* BGCOL = 0xd021;
@@ -148,6 +148,7 @@ void reset(){
   *VIC_MEMORY = 0x14;
   memset(SCREEN, ' ', 40*25);
   memset(COLS, WHITE, 40*25);
+  *BGCOL = 5;
   print_to_screen(MESSAGE);
   print_newline();
   current_screen_line = SCREEN;
