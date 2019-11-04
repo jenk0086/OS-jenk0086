@@ -148,7 +148,7 @@ void reset(){
   *VIC_MEMORY = 0x14;
   memset(SCREEN, ' ', 40*25);
   memset(COLS, WHITE, 40*25);
-  *BGCOL = 14;
+  *BGCOL = 6;
   print_to_screen(MESSAGE);
   print_newline();
   current_screen_line = SCREEN;
