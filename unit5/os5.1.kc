@@ -66,7 +66,7 @@ const unsigned char *process_context_states = $C900;
 
 
 volatile unsigned char *current_screen_line = SCREEN;
-volatile unsigned char current_screen_x = 0;
+volatile unsigned char current_screen_x = 6;
 
 void print_char(char c)
 {
