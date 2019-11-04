@@ -147,7 +147,7 @@ void describe_pdb(unsigned char pdb_number)
 }
 void reset(){
   *VIC_MEMORY = 0x14;
-  memset(SCREEN, BLUE, 40*25);
+  memset(SCREEN, ' ', 40*25);
   memset(COLS, WHITE, 40*25);
   print_to_screen(MESSAGE);
   print_newline();
@@ -160,7 +160,11 @@ void reset(){
     describe_pdb(0);
 
 	while(true) {
-	
+	       	if(*RASTER==54 || *RASTER==66) {
+			*BGCOL = WHITE;
+		} else {
+			*BGCOL = BLACK;
+		}
 	}
 }
 
