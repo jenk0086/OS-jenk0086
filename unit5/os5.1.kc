@@ -9,6 +9,7 @@ import "string"
 #pragma link("mega65hyper.ld")
 
 
+
 const char* RASTER = 0xd012;
 const char* VIC_MEMORY = 0xd018;
 const char* SCREEN = 0x0400;
