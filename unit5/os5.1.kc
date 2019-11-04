@@ -150,8 +150,9 @@ void reset(){
   memset(COLS, WHITE, 40*25);
   *BGCOL = BLUE;
   current_screen_line = SCREEN;
-  print_to_screen(MESSAGE);
   print_newline();
+  print_to_screen(MESSAGE);
+
 
   print_newline();
   print_newline();
