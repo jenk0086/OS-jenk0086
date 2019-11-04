@@ -41,8 +41,8 @@ struct process_descriptor_block {
   // Where this process is stored when not running
   // i.e., where in the $20000-$5FFFF memory range the
   // process is stored when not running.
-  unsigned long storage_start_address = $20000;
-  unsigned long storage_end_address = $5FFFF;
+  unsigned long storage_start_address;
+  unsigned long storage_end_address;
   //XXX - You need to add something here
   //XXX - You need to add something here
  
