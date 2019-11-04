@@ -14,8 +14,8 @@ const char* BGCOL = 0xd021;
 const char* COLS = 0xd800;
 const char BLACK = 0;
 const char RED = 7;
-unsigned char *current_screen_line = $0400;
-unsigned char current_screen_x = 0;
+volatile unsigned char *current_screen_line = $0400;
+volatile unsigned char current_screen_x = 0;
 
 // Some text to display
 char[] MESSAGE = "checkpoint 4.2 jenk0086";
