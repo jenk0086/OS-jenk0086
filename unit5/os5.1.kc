@@ -169,7 +169,7 @@ void reset(){
 	       	if(*RASTER==54 || *RASTER==66) {
 			*BGCOL = WHITE;
 		} else {
-			*BGCOL = BLACK;
+			*BGCOL = BLUE;
 		}
 	}
 }
