@@ -146,8 +146,8 @@ void print_to_screen(char *message){
 
 
 void print_newline(){
-  volatile unsigned char *current_screen_line;
-  volatile unsigned char current_screen_x;
+  //volatile unsigned char *current_screen_line;
+  //volatile unsigned char current_screen_x;
   current_screen_line = current_screen_line + 40; //Go to the next line
   current_screen_x = 0;                           // Start next line at beginning.
 }
