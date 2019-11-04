@@ -14,8 +14,8 @@ const char* BGCOL = 0xd021;
 const char* COLS = 0xd800;
 const char BLACK = 0;
 const char RED = 7;
-volatile unsigned char *current_screen_line = $0400;
-volatile unsigned char current_screen_x = 0;
+unsigned char *current_screen_line = $0400;
+unsigned char current_screen_x = 0;
 
 // Some text to display
 char[] MESSAGE = "checkpoint 4.1 jenk0086";
@@ -162,8 +162,8 @@ void reset() {
 	//	test_memory();
 	//	print_newline();
 	//	detect_devices();
-	//start_simple_program();
-	//current_screen_line = $0400;
+	start_simple_program();
+	//	current_screen_line = $0400;
 	//current_screen_x = 0;
 	
 	while(true) {
