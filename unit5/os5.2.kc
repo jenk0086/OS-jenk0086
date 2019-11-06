@@ -536,7 +536,7 @@ void syscall3F() {
 
 }
 
-XXX - Add your RESET() function here
+//XXX - Add your RESET() function here
 
 void reset() {
 	// Initialize screen memory, and select correct font
