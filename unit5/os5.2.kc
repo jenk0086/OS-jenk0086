@@ -158,6 +158,8 @@ void initialise_pdb(unsigned char pdb_number,char *name)
 
     char *pn=p->process_name;
     for(i=0;pn[i]&&(i<17);i++){
+      pn[i]=name[i];
+    }
 
 
       p->process_state = STATE_NOTRUNNING;
@@ -188,7 +190,6 @@ void initialise_pdb(unsigned char pdb_number,char *name)
    *(unsigned short *)&ss[7] = $080D;
 
    return;
-    }
 }
 
 
