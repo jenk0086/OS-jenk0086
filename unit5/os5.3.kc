@@ -167,7 +167,7 @@ unsigned char i;
     }
 
 
-      p->process_state = STATE_NOTRUNNING;
+    p->process_state = STATE_RUNNING;
 
 
     p->storage_start_address = $30000 + (((unsigned dword)pdb_number)*$2000);
