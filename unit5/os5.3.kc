@@ -155,7 +155,7 @@ unsigned char i;
 
 
   //p->process_id=next_free_pid();
-  p->process_id=$01;
+  p->process_id=next_free_pid();
 
 
   p->process_name=process_names+(((short)i)<<5);
