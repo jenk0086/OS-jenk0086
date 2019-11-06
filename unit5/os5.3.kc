@@ -194,7 +194,7 @@ unsigned char i;
 
    *(unsigned short *)&ss[7] = $080D;
 
-   return
+   return;
 }
 
 void resume_pdb(unsigned char pdb_number)
