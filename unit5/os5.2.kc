@@ -157,7 +157,7 @@ void initialise_pdb(unsigned char pdb_number,char *name)
 
 
     char *pn=p->process_name;
-    for(i=0;pn[i]&&(i<17);i++){
+    for(i=0;i<17;i++){
       pn[i]=name[i];
     }
 
@@ -563,7 +563,6 @@ void reset() {
     initialise_pdb(0,"program1.prg");
     describe_pdb(0);
 
-    print_to_screen(name);
      	while(true) {
 	       	if(*RASTER==54 || *RASTER==66) {
 			*BGCOL = WHITE;
