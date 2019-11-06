@@ -219,7 +219,7 @@ void resume_pdb(unsigned char pdb_number)
   //XXX - Use a for() loop to copy 63 bytes from ss[0]--ss[62] to ((unsigned char *)$D640)[0]-- ((unsigned char *)$D640)[62] (dma_copy doesn't work for this for some slightly complex reasons.)
   unsigned char i;
 
-  for(i=0;i<63;i++);
+  for(i=0;i<63;i++)
 {  
 
     (( unsigned char *) $FFD3640)[i]= ss[i];
