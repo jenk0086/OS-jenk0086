@@ -150,7 +150,7 @@ void initialise_pdb(unsigned char pdb_number,char *name)
     =(struct process_descriptor_block *)(((unsigned short)stored_pdbs)+(((unsigned short)pdb_number)<<8));
 
 
-  p->process_id = next_free_pid();
+  next_free_pid()=p->process_id;
 
 
   p->process_name=process_names+(((short)i)<<5);
