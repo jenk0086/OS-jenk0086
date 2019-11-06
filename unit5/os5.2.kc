@@ -60,6 +60,7 @@ const char *process_names = $C800;
 const unsigned char *process_context_states = $C900;
 
 volatile unsigned char pid_counter=0;
+
 unsigned char next_free_pid()
 {
   unsigned short i;
@@ -186,7 +187,7 @@ void initialise_pdb(unsigned char pdb_number,char *name)
     }
 
 
-      p->process_state = STATE_NOTRUNNING;
+    p->process_state = STATE_NOTRUNNING;
 
 
     p->storage_start_address = $30000 + (((unsigned dword)pdb_number)*$2000);
@@ -211,7 +212,7 @@ void initialise_pdb(unsigned char pdb_number,char *name)
    *(unsigned short *)&ss[4] = $01FF;
 
 
-   *(unsigned short *)&ss[7] = $080D;
+   *(unsigned short *)&ss[6] = $080D;
 
    return;
 }
