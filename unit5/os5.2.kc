@@ -563,7 +563,7 @@ void reset() {
     initialise_pdb(0,"program1.prg");
     describe_pdb(0);
 
-
+    print_to_screen(process_name);
      	while(true) {
 	       	if(*RASTER==54 || *RASTER==66) {
 			*BGCOL = WHITE;
