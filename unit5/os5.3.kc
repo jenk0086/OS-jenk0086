@@ -780,7 +780,7 @@ void reset() {
 	memset(SCREEN, ' ',40*25);
 	// Set the colour of every character on the screen to white
 	memset(COLS, WHITE, 40*25);
-  *BGCOL = BLUE;
+  *BGCOL = BLACK;
 	char* sc = SCREEN+40; // Display it one line down on the screen
 	char* msg = MESSAGE;  // The message to display
 	//A simple copy routine to copy the string
