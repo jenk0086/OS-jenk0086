@@ -200,7 +200,7 @@ void initialise_pdb(unsigned char pdb_number,char *name)
   unsigned char *ss=p->stored_state;
 
   //XXX - Set all 64 bytes of the array 'ss' to zero, to clear the context
-  switching state
+  switching state;
   for(i=0;i<63;i++) ss[i] = $00;
 
   // Set tandard CPU flags (8-bit stack, interrupts disabled)
