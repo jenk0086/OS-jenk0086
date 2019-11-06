@@ -59,7 +59,7 @@ const char *process_names = $C800;
 // 8 processes x 64 bytes context state = 512 bytes
 const unsigned char *process_context_states = $C900;
 
-
+volatile unsigned char pid_counter=0;
 volatile unsigned char *current_screen_line = SCREEN;
 volatile unsigned char current_screen_x = 0;
 
