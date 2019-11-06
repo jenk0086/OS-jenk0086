@@ -166,7 +166,7 @@ void initialise_pdb(unsigned char pdb_number,char *name)
     p->storage_start_address = $30000 + (((unsigned dword)pdb_number)*$2000);
 
 
-    p->process_end_address = $31FFF + (((unsigned dword)pdb_number)*$2000);
+    p->storage_end_address = $31FFF + (((unsigned dword)pdb_number)*$2000);
 
   // Initialise processor state for standard entry at $080D
   // Everything to zero, except for a few things we will set manually
