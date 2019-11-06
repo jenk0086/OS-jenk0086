@@ -212,7 +212,7 @@ void initialise_pdb(unsigned char pdb_number,char *name)
    *(unsigned short *)&ss[4] = $01FF;
 
 
-   *(unsigned short *)&ss[6] = $080D;
+   *(unsigned short *)&ss[8] = $080D;
 
    return;
 }
