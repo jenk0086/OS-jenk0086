@@ -219,9 +219,9 @@ void resume_pdb(unsigned char pdb_number)
   unsigned char i;
 
   for(i=0;i<53;i++){  
-     unsigned char *d = $D640;
-    d[i] = ss[i];
-    //(( unsigned char *) $D640)[i]= ss[i];
+    // unsigned char *d = $D640;
+    //d[i] = ss[i];
+    (( unsigned char *) $D640)[i]= *ss[i];
   }
 
 // Set state of process to running
