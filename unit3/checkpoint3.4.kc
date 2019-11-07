@@ -40,7 +40,7 @@ void detect_devices(){
       print_hex(i+r-1);
       print_newline();
     }
-    unsigned short s = detect_mos6526(i);
+    unsigned long s = detect_mos6526(i);
     if (s>0){
       print_to_screen("mos6526 detected at $");
       print_hex(i);
