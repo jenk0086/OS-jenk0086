@@ -82,7 +82,7 @@ unsigned short detect_mos6526(unsigned short address){
   unsigned long i;
 
   print_hex(address);
-  current_line_x=0;
+  current_screen_x=0;
   
   if (p[$0B] >= 0 && p[$0B] < 24){
 
