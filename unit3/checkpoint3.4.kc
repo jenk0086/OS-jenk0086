@@ -66,8 +66,17 @@ unsigned short detect_vicii(unsigned short address){
   }
 }
 
-//char detect_mos6526(unsigned short address){
-//}
+unsigned short detect_mos6526(unsigned short address){
+  volatile unsigned char *p = address;
+  unsigned short m1,m2;
+  long i;
+  
+  if (p[$0B] >= 0 && p[$0B] < 24)
+
+    for(i=1;i<2,000,000;i++);
+
+
+}
 void test_memory()
 {
   unsigned short mem_start = $0800;
