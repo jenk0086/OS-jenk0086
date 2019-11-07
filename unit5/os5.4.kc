@@ -238,7 +238,7 @@ void resume_pdb(unsigned char pdb_number)
 
   // Exit hypervisor and cause CPU register values (including PC) to be restored from
   // those loaded from p->stored_state
-  return;
+  exit_hypervisor();
 }
 
 void pause_pdb(unsigned char pdb_number)
@@ -503,13 +503,15 @@ void syscall04() {
 void syscall05() {
   unsigned short pid;
 
-  struct process_descriptor_block *pdb
-  =(struct process_descriptor_block *)
-  ((unsigned short)stored_pdbs+(((unsigned short)next_pdb)<<8));
+  pause_pdb(running_pdb);
 
-  pdb->PROCESS_STATE;
+  // struct process_descriptor_block *pdb
+  //=(struct process_descriptor_block *)
+  //((unsigned short)stored_pdbs+(((unsigned short)next_pdb)<<8));
 
-  print_to_screen("yeild");
+  //pdb->PROCESS_STATE;
+
+  print_to_screen("yield");
 
 
 	exit_hypervisor();
