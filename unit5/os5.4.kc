@@ -146,7 +146,7 @@ void describe_pdb(unsigned char pdb_number)
 }
 
 // Setup a new process descriptor block
-void initialise_pdb(unsigned char pdb_number){
+void initialise_pdb(unsigned char pdb_number, char* name){
 
 initialise_pdb(0,"program2.prg");
 load_program(0);
