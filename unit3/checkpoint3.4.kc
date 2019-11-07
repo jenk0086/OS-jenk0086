@@ -64,8 +64,8 @@ unsigned short detect_vicii(unsigned short address){
   }
 }
 
-char detect_mos6526(unsigned short address){
-}
+//char detect_mos6526(unsigned short address){
+//}
 void test_memory()
 {
   unsigned short mem_start = $0800;
