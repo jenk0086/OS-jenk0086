@@ -270,7 +270,7 @@ void pause_pdb(unsigned char pdb_number)
   //XXX - Set running_pdb to the PDB number we are resuming
   running_pdb=0;
 
-    exit_hypervisor();
+
 }
 
 struct dma_list {
