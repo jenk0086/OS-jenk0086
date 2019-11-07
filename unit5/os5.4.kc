@@ -850,7 +850,7 @@ load_program(0);
 initialise_pdb(1,"program2.prg");
 load_program(1);
 
-//initialise_pdb(0,"program1.prg");
+initialise_pdb(0,"program1.prg");
 
     describe_pdb(0);
     load_program(0);
