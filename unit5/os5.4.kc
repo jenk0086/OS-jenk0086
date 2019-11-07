@@ -93,7 +93,7 @@ unsigned char next_free_pid()
   return pid;
 }
 
-void describe_pdb(unsigned char pdb_number)
+void describe_pdb(unsigned short pdb_number)
 {
   unsigned char i;
   struct process_descriptor_block *p=(struct process_descriptor_block *)(((unsigned short)stored_pdbs)+(((unsigned short)pdb_number)<<8));
