@@ -517,7 +517,7 @@ void syscall05() {
 }
 
 void syscall06() {
-  unsigned char pid;
+  unsigned short pid;
   struct process_descriptor_block *pdb
     =(struct process_descriptor_block *)
     ((unsigned short)stored_pdbs+(((unsigned short)running_pdb<<8));
