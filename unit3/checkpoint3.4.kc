@@ -94,7 +94,7 @@ unsigned short detect_mos6526(unsigned short address){
       //}
       //else{
       //  return $FF;
-    }
+      //}
   }
    return 0;
 }
