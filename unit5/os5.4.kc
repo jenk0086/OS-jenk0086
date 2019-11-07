@@ -148,12 +148,6 @@ void describe_pdb(unsigned char pdb_number)
 // Setup a new process descriptor block
 void initialise_pdb(unsigned char pdb_number, char* name){
 
-initialise_pdb(0,"program2.prg");
-load_program(0);
-
-initialise_pdb(1,"program2.prg");
-load_program(1);
-
 
 unsigned char i;
 
@@ -849,10 +843,16 @@ void reset() {
     print_newline();
     print_newline();
 
-    initialise_pdb(0,"program1.prg");
+initialise_pdb(0,"program2.prg");
+load_program(0);
+
+initialise_pdb(1,"program2.prg");
+load_program(1);
+
+//initialise_pdb(0,"program1.prg");
     describe_pdb(0);
-    load_program(0);
-    resume_pdb(0);
+    //    load_program(0);
+    //resume_pdb(0);
 
 
      	while(true) {
