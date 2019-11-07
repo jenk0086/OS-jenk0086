@@ -77,7 +77,7 @@ unsigned short detect_mos6526(unsigned short address){
 
     for(i=1;i<2,000,000;i++)
 
-    if (m1!= p);
+    if (m1!= p)
     {
       return $FF;
     }
