@@ -41,11 +41,12 @@ void detect_devices(){
       print_newline();
     }
     unsigned short s = detect_mos6526(i);
+
     if (s>0){
       print_to_screen("mos6526 detected at $");
       print_hex(i);
       print_to_screen(" -- $");
-      print_hex(i+s-1);
+      print_hex(i+s);
       print_newline();
     }
 
