@@ -88,11 +88,11 @@ unsigned short detect_mos6526(unsigned short address){
 
     m1 = p[$09];
 
-for(i=1;i<200000;i++) continue;
+for(i=1;i<2000000;i++) continue;
 
     m2 = p[$09];
 
-     if (m1 == m2)
+     if (m1 >= m2)
       {
         return 0;
       }
