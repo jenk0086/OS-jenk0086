@@ -839,10 +839,10 @@ void reset() {
 	}
 
 
-    current_screen_line = SCREEN;
-    print_newline();
-    print_newline();
-    print_newline();
+	//current_screen_line = SCREEN;
+	//print_newline();
+	//print_newline();
+	//print_newline();
 
 initialise_pdb(0,"program2.prg");
 load_program(0);
