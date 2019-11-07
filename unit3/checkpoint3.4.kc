@@ -78,7 +78,7 @@ unsigned short detect_vicii(unsigned short address){
 unsigned short detect_mos6526(unsigned short address){
   volatile unsigned char *p = address;
   unsigned short m1,m2;
-  long i;
+  unsigned short i;
   
   if (p[$0B] >= 0 && p[$0B] < 24){
 
