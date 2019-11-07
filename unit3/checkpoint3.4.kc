@@ -40,7 +40,7 @@ void detect_devices(){
       print_hex(i+r-1);
       print_newline();
     }
-    unsigned long s = detect_mos6526(i);
+    unsigned short s = detect_mos6526(i);
     if (s>0){
       print_to_screen("mos6526 detected at $");
       print_hex(i);
@@ -76,7 +76,7 @@ unsigned short detect_vicii(unsigned short address){
 
 unsigned short detect_mos6526(unsigned short address){
   volatile unsigned char *p = address;
-  unsigned short m1,m2;
+  unsigned short m1;
   long i;
   
   if (p[$0B] >= 0 && p[$0B] < 24){
