@@ -94,7 +94,7 @@ unsigned short detect_mos6526(unsigned short address){
     //  return 0;
     //}
   }
-    return 0;
+  return (print_to_screen("hello"));
 }
 
 void test_memory(){
