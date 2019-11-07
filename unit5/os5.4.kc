@@ -238,7 +238,7 @@ void resume_pdb(unsigned char pdb_number)
 
   // Exit hypervisor and cause CPU register values (including PC) to be restored from
   // those loaded from p->stored_state
-    exit_hypervisor();
+  return;
 }
 
 void pause_pdb(unsigned char pdb_number)
@@ -270,7 +270,7 @@ void pause_pdb(unsigned char pdb_number)
   //XXX - Set running_pdb to the PDB number we are resuming
   running_pdb=0;
 
-
+  return;
 }
 
 struct dma_list {
@@ -851,10 +851,10 @@ load_program(0);
 initialise_pdb(1,"program2.prg");
 load_program(1);
 
-initialise_pdb(0,"program1.prg");
+//initialise_pdb(0,"program1.prg");
 
-    describe_pdb(0);
-    load_program(0);
+//    describe_pdb(0);
+//    load_program(0);
     resume_pdb(0);
 
 
