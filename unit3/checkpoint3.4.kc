@@ -31,7 +31,7 @@ void detect_devices(){
     i = check;
  while (i<finish)
   {
-    char r = detect_vicii(i);
+    unsigned short r = detect_vicii(i);
 
     if (r == 1){
       print_to_screen("vic-ii detected at $");
