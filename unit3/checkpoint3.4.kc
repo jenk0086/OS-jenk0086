@@ -36,7 +36,8 @@ void detect_devices(){
     if (r>0){
       print_to_screen("vic-ii detected at $");
       print_hex(i);
-      print_to_screen(" -- $" i+r);
+      print_to_screen(" -- $");
+      print_hex(i+r);
       print_newline();
     }
 
