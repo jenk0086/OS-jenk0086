@@ -22,6 +22,7 @@ void yield()
 {  
 	enable_syscalls();
 	*(unsigned char *)$D645 = $00;
+	showpid();
 	asm { nop }
 }
 
@@ -46,6 +47,6 @@ void exec(char *program_name)
 
 	enable_syscalls();
 	*(unsigned char *)$D648 = $00;
-	showpid();
+
 	asm { nop }
 }
