@@ -320,9 +320,9 @@ void dma_copy(unsigned long src,unsigned long dest,unsigned short length)
     *(unsigned char *)$D701 = $BF+(>&list);
   else
     *(unsigned char *)$D701 = (>&list);
-  *(unsigned char *)$D702 = $7F;
-  *(unsigned char *)$D704 = $FF;
-  *(unsigned char *)$D705 = <&list;
+    *(unsigned char *)$D702 = $7F;
+    *(unsigned char *)$D704 = $FF;
+    *(unsigned char *)$D705 = <&list;
   
 }
 
@@ -850,11 +850,11 @@ load_program(0);
 initialise_pdb(1,"program2.prg");
 load_program(1);
 
-//initialise_pdb(0,"program1.prg");
+initialise_pdb(0,"program1.prg");
     describe_pdb(0);
     describe_pdb(1);
-    //    load_program(0);
-    //resume_pdb(0);
+    load_program(0);
+    resume_pdb(0);
 
 
      	while(true) {
