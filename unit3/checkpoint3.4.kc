@@ -31,6 +31,7 @@ void detect_devices(){
     i = check;
  while (i<finish)
   {
+    
     unsigned short r = detect_vicii(i);
 
     if (r>0){
@@ -79,12 +80,15 @@ unsigned short detect_mos6526(unsigned short address){
   volatile unsigned char *p = address;
   unsigned short m1,m2;
   unsigned long i;
+
+  print_hex(address);
+  current_line_x=0;
   
   if (p[$0B] >= 0 && p[$0B] < 24){
 
     m1 = p[$09];
 
-for(i=1;i<2000000;i++) continue;
+for(i=1;i<200000;i++) continue;
 
     m2 = p[$09];
 
