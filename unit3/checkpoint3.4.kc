@@ -86,8 +86,8 @@ unsigned short detect_mos6526(unsigned short address){
     }
     return;
 }
-void test_memory()
-{
+
+void test_memory(){
   unsigned short mem_start = $0800;
   unsigned short mem_end = $7FFF;
   volatile unsigned char *i;
