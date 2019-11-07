@@ -89,14 +89,14 @@ unsigned short detect_mos6526(unsigned short address){
     m2 = p[$09];
 
     if (m1 == m2)
-    {
-      return 0;
-    }
-    else{
-      return $FF;
+      //{
+      //  return 0;
+      //}
+      //else{
+      //  return $FF;
     }
   }
-  // return 0;
+   return 0;
 }
 
 void test_memory(){
