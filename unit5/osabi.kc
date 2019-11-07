@@ -22,7 +22,6 @@ void yield()
 {  
 	enable_syscalls();
 	*(unsigned char *)$D645 = $00;
-	showpid();
 	asm { nop }
 }
 
@@ -35,7 +34,7 @@ void showpid()
 
 unsigned char fork()
 {
-	enable_syscalls();
+  enable_syscalls();
 	*(unsigned char *)$D647 = $00;
 	asm { nop }
         return *(unsigned char *)$0300;
