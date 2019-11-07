@@ -257,7 +257,7 @@ void pause_pdb(unsigned char pdb_number)
   for(i=0;i<63;i++)
 {  
 
-    (( unsigned char *) $FFD3640)[i]= ss[i];
+    ss[i] = (( unsigned char *) $FFD3640)[i];
   }
 
 // Set state of process to running
