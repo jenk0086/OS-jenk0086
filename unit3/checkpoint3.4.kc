@@ -40,6 +40,7 @@ void detect_devices(){
       print_to_screen(" -- $");
       print_hex(i+r-1);
       print_newline();
+      i=i+r;
     }
     unsigned short s = detect_mos6526(i);
 
@@ -49,6 +50,7 @@ void detect_devices(){
       print_to_screen(" -- $");
       print_hex(i+s);
       print_newline();
+      i=i+s;
     }
 
       i=i+$10;
@@ -92,7 +94,7 @@ for(i=1;i<2000000;i++) continue;
 
     m2 = p[$09];
 
-     if (m1 >= m2)
+     if (m1 == m2)
       {
         return 0;
       }
