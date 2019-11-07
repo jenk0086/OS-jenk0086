@@ -46,6 +46,6 @@ void exec(char *program_name)
 
 	enable_syscalls();
 	*(unsigned char *)$D648 = $00;
-	syscall06();
+	showpid();
 	asm { nop }
 }
