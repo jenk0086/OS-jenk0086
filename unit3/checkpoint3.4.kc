@@ -75,7 +75,7 @@ unsigned short detect_mos6526(unsigned short address){
 
     m1 = p[$09];
 
-    for(i=1;i<2,000,000;i++)
+    for(i=1;i<2,000,000;i++) continue;
 
     if (m1!= p)
     {
@@ -84,7 +84,8 @@ unsigned short detect_mos6526(unsigned short address){
     else{
       return 0;
     }
-    return;
+  }
+    return 0;
 }
 
 void test_memory(){
