@@ -508,6 +508,7 @@ void syscall05() {
   //((unsigned short)stored_pdbs+(((unsigned short)next_pdb)<<8));
 
   //pdb->PROCESS_STATE;
+  print_to_screen("yeild");
 
 
 	exit_hypervisor();
