@@ -20,7 +20,7 @@ void end_program()
 
 void yield()
 {  
-	enable_syscall05();
+	enable_syscalls();
 	*(unsigned char *)$D645 = $00;
 	asm { nop }
 }
