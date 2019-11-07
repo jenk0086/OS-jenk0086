@@ -517,10 +517,10 @@ void syscall05() {
 }
 
 void syscall06() {
-  unsigned short pid;
+  unsigned char pid;
   struct process_descriptor_block *pdb
     =(struct process_descriptor_block *)
-    ((unsigned short)stored_pdbs+(((unsigned short)running_pdb<<8));
+    ((unsigned short)stored_pdbs+(((unsigned short)running_pdb)<<8));
 
      print_to_screen("you are pid ");
      print_hex(pdb->process_id);
