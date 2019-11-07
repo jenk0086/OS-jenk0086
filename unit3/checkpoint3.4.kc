@@ -86,13 +86,13 @@ unsigned short detect_mos6526(unsigned short address){
 
     //for(i=1;i<2,000,000;i++) continue;
 
-    //if (m1!= p[$09])
-    //{
-    //  return $FF;
-    //}
-    //else{
-    //  return 0;
-    //}
+    if (m1!= p[$09])
+    {
+      return $FF;
+    }
+    else{
+      return 0;
+    }
   }
   return 0;
 }
