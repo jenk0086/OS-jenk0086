@@ -146,12 +146,13 @@ void describe_pdb(unsigned char pdb_number)
 }
 
 // Setup a new process descriptor block
+
 initialise_pdb(0,"program2.prg");
 load_program(0);
 
 initialise_pdb(1,"program2.prg");
 load_program(1);
-{
+
 
 unsigned char i;
 
