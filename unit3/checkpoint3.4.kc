@@ -71,11 +71,20 @@ unsigned short detect_mos6526(unsigned short address){
   unsigned short m1,m2;
   long i;
   
-  if (p[$0B] >= 0 && p[$0B] < 24)
+  if (p[$0B] >= 0 && p[$0B] < 24){
+
+    m1 = p[$09];
 
     for(i=1;i<2,000,000;i++);
 
-
+    if (m1!= p);
+    {
+      return $FF;
+    }
+    else{
+      return 0;
+    }
+    return;
 }
 void test_memory()
 {
