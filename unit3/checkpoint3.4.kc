@@ -94,7 +94,7 @@ for(i=1;i<2000000;i++) continue;
 
     m2 = p[$09];
 
-     if (m1 == m2)
+     if (m2>m1)
       {
         return $FF;
       }
