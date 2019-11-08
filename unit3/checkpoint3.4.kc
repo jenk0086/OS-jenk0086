@@ -50,7 +50,7 @@ void detect_devices(){
       print_to_screen(" -- $");
       print_hex(i+s);
       print_newline();
-      i=i+s;
+      //i=i+s;
     }
 
       i=i+$10;
