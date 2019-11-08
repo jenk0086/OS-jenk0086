@@ -99,7 +99,7 @@ for(i=1;i<2000000;i++) continue;
       {
 	print_to_screen(" K");
 	current_screen_x=0;
-        return $FF;
+        return $100;
       }
       else{
 	print_to_screen(" G");
