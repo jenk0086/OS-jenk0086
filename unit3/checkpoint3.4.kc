@@ -80,7 +80,7 @@ unsigned short detect_vicii(unsigned short address){
 
 unsigned short detect_mos6526(unsigned short address){
   volatile unsigned char *p = address;
-  unsigned byte m1,m2;
+  volatile unsigned byte m1,m2;
   unsigned long i;
 
   print_hex(address);
