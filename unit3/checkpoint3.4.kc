@@ -84,7 +84,6 @@ unsigned short detect_mos6526(unsigned short address){
   unsigned long i;
 
   print_hex(address);
-  current_screen_x=0;
   
   if (p[$0B] >= 0 && p[$0B] < 24){
 
@@ -96,9 +95,13 @@ for(i=1;i<2000000;i++) continue;
 
      if (m2>m1)
       {
+	print_to_screen(" F");
+	current_screen_x=0;
         return $FF;
       }
       else{
+	print_to_screen(" G");
+	current_screen_x=0;
         return 0;
       }
   }
