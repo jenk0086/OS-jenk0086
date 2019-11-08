@@ -96,10 +96,10 @@ for(i=1;i<2000000;i++) continue;
 
      if (m1 == m2)
       {
-        return 0;
+        return $FF;
       }
       else{
-        return $FF;
+        return 0;
       }
   }
    return 0;
