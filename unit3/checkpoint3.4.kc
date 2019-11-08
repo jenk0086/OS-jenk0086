@@ -85,7 +85,7 @@ unsigned short detect_mos6526(unsigned short address){
 
   print_hex(address);
   
-  if (p[$0B] >= 0 && p[$0B] < 24){
+  if (p[$0B] < 24){
 
     m1 = p[$09];
 
