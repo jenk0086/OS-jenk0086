@@ -41,7 +41,10 @@ void detect_devices(){
       print_hex(i+r-1);
       print_newline();
       i=i+r;
-    }
+    } 
+
+ while (i<finish)
+   {
     volatile unsigned short s = detect_mos6526(i);
 
     if (s>0){
@@ -50,10 +53,11 @@ void detect_devices(){
       print_to_screen(" -- $");
       print_hex(i+s-1);
       print_newline();
-      //i=i+s;
+      i=i+s;
     }
 
       i=i+$10;
+   }
   }
  print_to_screen("finished probing devices");
 }
