@@ -40,7 +40,7 @@ void detect_devices(){
       print_to_screen(" -- $");
       print_hex(i+r-1);
       print_newline();
-      i=i+r;
+      i=i+r-$10;
     } 
 
     volatile unsigned short s = detect_mos6526(i);
@@ -51,7 +51,7 @@ void detect_devices(){
       print_to_screen(" -- $");
       print_hex(i+s-1);
       print_newline();
-      i=i+s-10;
+      i=i+s-$10;
     }
 
       i=i+$10;
