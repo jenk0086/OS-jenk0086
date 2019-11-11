@@ -509,7 +509,7 @@ void syscall05() {
   =(struct process_descriptor_block *)
   ((unsigned short)stored_pdbs+(((unsigned short)next_pdb)<<8));
 
-
+  yield();
   print_to_screen("yield");
 
 
