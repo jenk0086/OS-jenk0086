@@ -895,7 +895,7 @@ struct ipc_message *get_pointer_to_message(unsigned char id)
 {
 
   return (struct ipc_message *)
-    (ipc_message+id*16);
+    (ipc_messages+id*16);
 
 }
 
