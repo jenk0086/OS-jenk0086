@@ -8,6 +8,15 @@ import "string"
 
 #pragma link("mega65hyper.ld")
 
+struct ipc_message {
+  unsigned char from;
+  unsigned char to;
+  unsigned char priority;
+  unsigned char sequence;
+  unsigned char[12] message;
+
+};
+
 
 const char* RASTER = 0xd012;
 const char* VIC_MEMORY = 0xd018;
@@ -423,15 +432,6 @@ unsigned char load_program(unsigned char pdb_number)
   // Failed to find program
   return 1;
 }
-
-struct ipc_message {
-  unsigned char from;
-  unsigned char to;
-  unsigned char priority;
-  unsigned char sequence;
-  unsigned char[12] message;
-
-};
 
 const unsigned char *ipc_messages = $CB00;
 volatile unsigned char ipc_message_count;
