@@ -28,19 +28,19 @@ const unsigned char STATE_BLOCKED = $05;
 const unsigned char STATE_RUNNING = $06;
 const unsigned char STATE_EXIT = $07;
 
-// Process Descriptor Block definition
-struct process_descriptor_block {
 
-  // Unique identifier for the process
-  unsigned char process_id;
+struct process_descriptor_block { // Process Descriptor Block definition
 
 
-  // Current state of the process
-  unsigned char process_state;
+  unsigned char process_id;  // Unique identifier for the process
 
 
-  // Human readable name of the process
-  char* process_name;
+
+  unsigned char process_state;   // Current state of the process
+
+
+
+  char* process_name;   // Human readable name of the process
 
   
   // Where this process is stored when not running
@@ -330,7 +330,7 @@ volatile unsigned char lpeek_value = $12;
 unsigned char lpeek(unsigned long address)
 {
   // Work around all sorts of fun problems in KickC
-  //  dma_copy(address,$BF00+((unsigned short)<&lpeek_value),1);  
+  dma_copy(address,$BF00+((unsigned short)<&lpeek_value),1);  
   unsigned dword t = (unsigned dword)&lpeek_value;
   if (>((unsigned short)&lpeek_value)) t+=$FFF0000;
   else t += $FFFBF00;
@@ -503,7 +503,7 @@ void syscall04() {
 void syscall05() {
   unsigned short next_pdb;
 
-  pause_pdb(running_pdb);
+  //pause_pdb(running_pdb);
 
   struct process_descriptor_block *pdb
   =(struct process_descriptor_block *)
