@@ -501,7 +501,7 @@ void syscall04() {
 }
 
 void syscall05() {
-  unsigned short pid;
+  unsigned short next_pdb;
 
   pause_pdb(running_pdb);
 
