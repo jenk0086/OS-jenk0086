@@ -814,7 +814,7 @@ void reset() {
     print_newline();
 
     ipc_message_count=0;
-    queue_message(0,1,1,1, "cpoint 6.1 ");
+    queue_message(0,1,1,1,"cpoint 6.1 ");
     initialise_pdb(0,"program1.prg");
     load_program(0);
     resume_pdb(0);
