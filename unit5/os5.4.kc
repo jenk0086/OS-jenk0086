@@ -73,8 +73,8 @@ unsigned char next_free_pid()
 {
   unsigned short i;
 
-  // Start with the next process ID
-  unsigned char pid=++pid_counter;
+
+  unsigned char pid=++pid_counter;   // Start with the next process ID
 	
   // then make sure that it isn't currently in use by another process
   // This loop must terminate according to the Pigeon Hole Principlle,
@@ -182,7 +182,7 @@ unsigned char i;
   p->stored_state=process_context_states+(((unsigned short)pdb_number)<<6);
   unsigned char *ss=p->stored_state;
 
-  //XXX - Set all 64 bytes of the array 'ss' to zero, to clear the context switching state
+
   for(i=0;i<63;i++) ss[i] = $00;
 
   // Set tandard CPU flags (8-bit stack, interrupts disabled)
@@ -206,8 +206,6 @@ void resume_pdb(unsigned char pdb_number)
   // Copy stored memory into place
   // Copy from $0000-$03FF and $0800-$1FFF, so that we don't overwrite
   // the screen
-  //XXX - Copy $0400 bytes from p->storage_start_address to location $0000
-  //XXX - Copy $1800 bytes from p->storage_start_address+$0800 to location $0800
   //(Use (unsigned dword)(p->storage_start_address)+offset to pass these
   //addresses in calls to dma_copy() to cast them to the correct type.)
 
@@ -226,18 +224,15 @@ void resume_pdb(unsigned char pdb_number)
   }
 
 // Set state of process to running
-//XXX - Set p->process_state to STATE_RUNNING
 
   p->process_state=STATE_RUNNING;
 
 
   // Mark this PDB as the running process
-  //XXX - Set running_pdb to the PDB number we are resuming
   running_pdb=pdb_number;
 
 
-  // Exit hypervisor and cause CPU register values (including PC) to be restored from
-  // those loaded from p->stored_state
+  // Exit hypervisor and cause CPU register values (including PC) to be restored from those loaded from p->stored_state
   exit_hypervisor();
 }
 
@@ -260,13 +255,11 @@ void pause_pdb(unsigned char pdb_number)
     ss[i] = (( unsigned char *) $FFD3640)[i];
   }
 
-// Set state of process to running
 //XXX - Set p->process_state to STATE_READY
 
   p->process_state=STATE_READY;
 
 
-  // Mark this PDB as the running process
   //XXX - Set running_pdb to the PDB number we are resuming
   running_pdb=0;
 
@@ -426,8 +419,6 @@ unsigned char load_program(unsigned char pdb_number)
       unsigned char *hb=((unsigned char *)&length)+1;
       length = lpeek(address+16);
       *hb = lpeek(address+17);
-
-      // XXX - Make sure it fits the allocated memory
       
       // Copy program into place.
       // As the program is formatted as a C64 program with a 
@@ -438,8 +429,8 @@ unsigned char load_program(unsigned char pdb_number)
 
       dma_copy(address+32,dest,length);
 
-      // Mark process as now runnable
-      pdb->process_state=STATE_READY;
+
+      pdb->process_state=STATE_READY;      // Mark process as now runnable
 
       return 0;
     }
@@ -502,16 +493,12 @@ void syscall04() {
 
 void syscall05() {
   unsigned short next_pdb;
-
-
-
   struct process_descriptor_block *pdb
   =(struct process_descriptor_block *)
   ((unsigned short)stored_pdbs+(((unsigned short)next_pdb)<<8));
 
   pause_pdb(running_pdb);
   print_to_screen("yield");
-
 
 	exit_hypervisor();
 
