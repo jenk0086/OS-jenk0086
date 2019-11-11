@@ -505,11 +505,11 @@ void syscall05() {
 
   pause_pdb(running_pdb);
 
-  // struct process_descriptor_block *pdb
-  //=(struct process_descriptor_block *)
-  //((unsigned short)stored_pdbs+(((unsigned short)next_pdb)<<8));
+  struct process_descriptor_block *pdb
+  =(struct process_descriptor_block *)
+  ((unsigned short)stored_pdbs+(((unsigned short)next_pdb)<<8));
 
-  //pdb->PROCESS_STATE;
+  pdb->PROCESS_STATE;
 
   print_to_screen("yield");
 
