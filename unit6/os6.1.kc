@@ -501,7 +501,7 @@ struct process_descriptor_block *pdb
  unsigned char message_id=get_next_message_id(caller_pid);
 
  if (message_id!=0xFF) {
-   struct ipc_message *m=get_pointer_to_message(message_id);
+   struct ipc_message*m=get_pointer_to_message(message_id);
    dma_copy((unsigned short)m,$0300,16);
    dequeue_message(message_id);
 
