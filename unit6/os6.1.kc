@@ -881,7 +881,7 @@ unsigned char get_next_message_id(unsigned char receiver)
 
   for(unsigned char i=0;i<16;i++) {
     struct ipc_message *m=(struct ipc_message *)
-      (ipc_message+i*16);
+      (ipc_messages+i*16);
     if (m->to==reciever) {
       if (best_message==0xff) {
 	best_message=i;
