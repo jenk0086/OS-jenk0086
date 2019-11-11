@@ -513,6 +513,7 @@ struct process_descriptor_block *pdb
   for(unsigned char i=0;i<16;i++)
     *(unsigned char *)($0300+i)=0xff;
       exit_hypervisor();
+ }
 
 }
 
