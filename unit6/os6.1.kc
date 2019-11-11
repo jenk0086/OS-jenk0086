@@ -39,7 +39,7 @@ const unsigned char STATE_EXIT = $07;
 
 // Process Descriptor Block definition
 struct process_descriptor_block {
-//XXX - Copy from your os5.2.kc file 
+ 
   // Unique identifier for the process
   unsigned char process_id;
 
@@ -64,10 +64,9 @@ struct process_descriptor_block {
     unsigned char* stored_state;
 };
 
-// Process stored state will live at $C000-$C7FF, with 256 bytes
-// for each process reserved
+
 const unsigned char *stored_pdbs = $C000;
-// 8 processes x 16 bytes = 128 bytes for names
+
 const char *process_names = $C800;
 // 8 processes x 64 bytes context state = 512 bytes
 const unsigned char *process_context_states = $C900;
@@ -456,11 +455,11 @@ void dequeue_message(unsigned char message_num)
 
 {
   if (message_num>=ipc_message_count) return;
-  if (message_num==(ipc_count-1)) {
+  if (message_num==(ipc_message_count-1)) {
     ipc_message_count--; return;
   }
   unsigned char *dest=(unsigned char *)
-    ((unsigned short)ipc_message+message_num*16);
+    ((unsigned short)ipc_messages+message_num*16);
   unsigned char *src=(unsigned char *)
     ((unsigned short)ipc_messages+(ipc_message_count-1)*16);
   for (unsigned char i=0;i<16;i++) dest[i]=src[i];
@@ -477,7 +476,7 @@ unsigned char get_next_message_id(unsigned char receiver)
   for(unsigned char i=0;i<16;i++) {
     struct ipc_message *m=(struct ipc_message *)
       (ipc_messages+i*16);
-    if (m->to==reciever) {
+    if (m->to==receiver) {
       if (best_message==0xff) {
 	best_message=i;
        }
