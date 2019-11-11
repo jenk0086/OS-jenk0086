@@ -493,8 +493,25 @@ void syscall08() {
 }
 
 void syscall09() {
+struct process_descriptor_block *pdb
+  =(struct process_descriptor_block*)
+  ((unsigned short)stored_pdbs+(((unsigned short)running_pdb)<<8));
+ unsigned char caller_pid=pdb->process_id;
+
+ unsigned char message_id=get_pointer_to_message(message_id);
+
+ if (message_id!=0xFF) {
+   struct ipc_message*m=get_pointer_to_message(message_id);
+   dma_copy((unsigned short)m,$0300,16);
+   dequeue_message(message_id);
+
 
 	exit_hypervisor();
+ } else {
+
+  for(unsigned char i=0;i<16;i++)
+    *(unsigned char *)($0300+i)=0xff
+      exit_hypervisor();
 
 }
 
@@ -502,7 +519,7 @@ void syscall0A() {
 
 	exit_hypervisor();
 
-}
+} 
 
 void syscall0B() {
 
@@ -794,8 +811,9 @@ void reset() {
     print_newline();
     print_newline();
 
+    ipc_message_count=0;
+    queue_message(0,1,1,1, "cpoint 6.1 ");
     initialise_pdb(0,"program1.prg");
-    describe_pdb(0);
     load_program(0);
     resume_pdb(0);
 
