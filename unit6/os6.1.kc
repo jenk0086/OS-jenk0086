@@ -864,7 +864,7 @@ unsigned char get_next_message_id(unsigned char receiver)
       (ipc_message+i*16);
     if (m->to==reciever) {
       if (best_message==0xff) {
-	best_message=i
+	best_message=i;
        }
     }
   }
