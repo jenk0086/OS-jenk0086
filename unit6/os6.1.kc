@@ -498,7 +498,7 @@ struct process_descriptor_block *pdb
   ((unsigned short)stored_pdbs+(((unsigned short)running_pdb)<<8));
  unsigned char caller_pid=pdb->process_id;
 
- unsigned char message_id=get_pointer_to_message(message_id);
+ unsigned char message_id=get_next_message_id(caller_pid);
 
  if (message_id!=0xFF) {
    struct ipc_message*m=get_pointer_to_message(message_id);
@@ -507,6 +507,7 @@ struct process_descriptor_block *pdb
 
 
 	exit_hypervisor();
+
  } else {
 
   for(unsigned char i=0;i<16;i++)
