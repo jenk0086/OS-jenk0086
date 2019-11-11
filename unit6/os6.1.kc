@@ -848,7 +848,7 @@ void queue_message(unsigned char from, unsigned char to, unsigned char priority,
   if (ipc_message_count>15) return;
 
   struct ipc_message *m=(struct ipc_message *)
-    (ipc_messages+ipc_message_count*16);
+    (ipc_message+ipc_message_count*16);
 
   m->from=from; m->to=to; m->priority=priority; m->sequence=sequence;
   for(unsigned char i=0;i<12;i++) m->message[i]=message[i];
