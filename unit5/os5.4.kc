@@ -503,7 +503,7 @@ void syscall04() {
 void syscall05() {
   unsigned short next_pdb;
 
-  //pause_pdb(running_pdb);
+  pause_pdb(running_pdb);
 
   struct process_descriptor_block *pdb
   =(struct process_descriptor_block *)
